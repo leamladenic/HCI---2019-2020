@@ -7,31 +7,31 @@ import "./menu.css"
 const data = [
   {
     text: "BLOG",
-    link: "../../pages/blog.js",
+    link: "/blog/",
   },
   {
     text: "PSI",
-    link: "../../pages/dog.js",
+    link: "/dog/",
   },
   {
     text: "MAČKE",
-    link: "../../pages/cat.js",
+    link: "/cat/",
   },
   {
     text: "TRGOVINA",
-    link: "../../pages/shop.js",
+    link: "/shop/",
   },
   {
     text: "KONTAKTI",
-    link: "../../pages/contact.js",
+    link: "/contact/",
   },
   {
     text: "O NAMA",
-    link: "../../pages/about.js",
+    link: "/about/",
   },
   {
     text: "Q/A",
-    link: "../../pages/qa.js",
+    link: "/qa/",
   },
 ]
 
