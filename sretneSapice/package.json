@@ -20,6 +20,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.8.0",
     "react-motion": "^0.5.2",
+    "react-priority-navigation": "^1.0.2",
     "react-search-field": "^1.0.0"
   },
   "devDependencies": {
