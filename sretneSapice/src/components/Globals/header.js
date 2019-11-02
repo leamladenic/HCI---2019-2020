@@ -1,52 +1,35 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
 import logo from "../../images/logo_header.png"
-import izbornik from "../../images/izbornik.png"
-import { FaCartArrowDown, FaRegBell } from "react-icons/fa"
-import opensans from "../../fonts/OpenSans.ttf"
 
-export default class navBar extends Component {
-  state = {
-    navbarOpen: false,
-    css: "collapse navbar-collapse",
-    links: [
-      {
-        id: 1,
-        path: "/",
-        text: "Home",
-      },
-      {
-        id: 2,
-        path: "/about",
-        text: "About",
-      },
-    ],
-  }
+import Menu from "./menu"
 
-  navbarHandler = () => {
-    console.log("Heloo")
-  }
+export default class Header extends Component {
   render() {
     return (
-      <nav
+      <header
         className="navbar navbar-expand-sm "
-        style={{ backgroundColor: "rgb(252, 143, 155)", maxHeight: "80px" }}
+        style={{
+          backgroundColor: "#FC8F9B",
+          maxHeight: "80px",
+          display: "flex",
+          flexDirection: "row",
+        }}
       >
-        <Link to="/" className="navbar-brand"></Link>
+        <div>
+          <Menu />
+        </div>
         <img
-          src={izbornik}
-          style={{ height: "45px", marginTop: "30px", marginLeft: "-20px" }}
-        ></img>
-        <img
+          id="logo"
           src={logo}
           style={{
             height: "75px",
-            marginLeft: "auto",
             marginRight: "auto",
-            marginTop: "30px",
+            marginLeft: "auto",
+            marginTop: "28px",
+            justifyContent: "center",
           }}
         ></img>
-
         <div id="login-button">
           <button
             type="button"
@@ -59,7 +42,7 @@ export default class navBar extends Component {
               padding: "15px 32px",
               textAlign: "center",
               display: "inline-block",
-              fontFamily: { opensans },
+              fontFamily: "'Roboto', sans-serif",
               fontStyle: "normal",
               fontSize: "16px",
             }}
@@ -67,13 +50,12 @@ export default class navBar extends Component {
             PRIJAVA
           </button>
         </div>
-
         <button
           className="navbar-toggler"
           type="button"
           onClick={this.navbarHandler}
         ></button>
-      </nav>
+      </header>
     )
   }
 }
