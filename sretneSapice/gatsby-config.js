@@ -3,6 +3,36 @@ module.exports = {
     title: `Sretne Šapice`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    menuItems: [
+      {
+        text: "BLOG",
+        link: "/blog/",
+      },
+      {
+        text: "PSI",
+        link: "/dog/",
+      },
+      {
+        text: "MAČKE",
+        link: "/cat/",
+      },
+      {
+        text: "TRGOVINA",
+        link: "/shop/",
+      },
+      {
+        text: "KONTAKTI",
+        link: "/contact/",
+      },
+      {
+        text: "O NAMA",
+        link: "/about/",
+      },
+      {
+        text: "Q/A",
+        link: "/qa/",
+      },
+    ],
   },
 
   plugins: [

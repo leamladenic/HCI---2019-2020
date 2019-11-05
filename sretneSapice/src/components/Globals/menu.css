@@ -25,6 +25,10 @@ nav.show {
   flex-direction: row;
 }
 
+.menu-items:hover {
+  border-bottom: 5px solid #ffb5b5;
+}
+
 .menu-list {
   list-style: none;
 }
