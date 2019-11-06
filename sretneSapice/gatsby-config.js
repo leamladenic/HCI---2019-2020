@@ -5,6 +5,10 @@ module.exports = {
     author: `@gatsbyjs`,
     menuItems: [
       {
+        text: "HOME",
+        link: "./",
+      },
+      {
         text: "BLOG",
         link: "/blog/",
       },

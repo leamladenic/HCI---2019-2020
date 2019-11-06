@@ -12,7 +12,10 @@
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.34",
+    "gatsby-remark-responsive-iframe": "^2.2.25",
+    "gatsby-remark-wrap-iframe": "^1.1.0",
     "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-transformer-json": "^2.2.16",
     "gatsby-transformer-sharp": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
@@ -21,7 +24,8 @@
     "react-icons": "^3.8.0",
     "react-motion": "^0.5.2",
     "react-priority-navigation": "^1.0.2",
-    "react-search-field": "^1.0.0"
+    "react-search-field": "^1.0.0",
+    "yarn": "^1.19.1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

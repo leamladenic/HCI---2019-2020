@@ -1,0 +1,61 @@
+body {
+  background-color: #e5e5e5;
+}
+.main-div {
+  display: grid;
+  grid-template-columns: 320px auto;
+  grid-template-areas: "left-div . right-div";
+  align-items: center;
+  justify-items: center;
+}
+
+.left-div {
+  justify-self: center;
+  margin-left: 35px;
+  margin-top: 30px;
+  align-items: center;
+  width: 300px;
+}
+
+.right-div {
+  justify-self: center;
+  background-color: white;
+}
+
+.navigation-mark {
+  background-color: #fc8f9b;
+  width: 300px;
+  min-height: 70px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.filter {
+  background-color: white;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  color: #3f3f3f;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+}
+.animal-filter {
+  background-color: #ffb5b5;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 25px;
+  padding: 15px 32px;
+  margin-bottom: 20px;
+}
+
+.animal-filter:focus {
+  outline: none !important;
+}

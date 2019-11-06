@@ -116,7 +116,13 @@ class Menu extends React.Component {
                 <ul className="menu-items">
                   {data.site.siteMetadata.menuItems.map(item => (
                     <li key={item.text} className="menu-list">
-                      <a href={item.link} className="menu-link">
+                      <a
+                        href={item.link}
+                        className="menu-link"
+                        sytle={{
+                          TextDecoration: "none",
+                        }}
+                      >
                         {item.text}
                       </a>
                     </li>

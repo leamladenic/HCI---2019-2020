@@ -15,6 +15,7 @@ const AboutPage = () => (
         top: "123px",
       }}
     ></img>
+
     <div
       style={{
         marginLeft: "130px",

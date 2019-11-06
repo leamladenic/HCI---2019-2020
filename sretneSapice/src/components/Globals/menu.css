@@ -25,18 +25,18 @@ nav.show {
   flex-direction: row;
 }
 
-.menu-items:hover {
-  border-bottom: 5px solid #ffb5b5;
-}
-
 .menu-list {
   list-style: none;
+}
+
+.menu-list:hover {
+  border-bottom: 5px solid #e77f8a;
 }
 
 .menu-link {
   text-decoration: none;
   color: #ffffff;
-  padding-right: 50px;
+  padding-right: 40px;
   padding-left: 40px;
   display: flex;
   margin-top: 8px;
