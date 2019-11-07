@@ -29,8 +29,8 @@ class ShopPage extends React.Component {
               <p
                 style={{
                   fontWeight: "bold",
-                  fontSize: "35px",
-                  padding: "22px",
+                  fontSize: "25px",
+                  padding: "18px",
                   marginBottom: "-10px",
                 }}
               >
@@ -47,6 +47,7 @@ class ShopPage extends React.Component {
                 width: "280px",
                 fontSize: "19px",
                 marginTop: "10px",
+                marginBottom: "30px",
               }}
             >
               Sav novac ide za potrebe štićenika azila.

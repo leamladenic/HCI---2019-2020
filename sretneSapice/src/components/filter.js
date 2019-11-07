@@ -49,6 +49,131 @@ class Filter extends React.Component {
               MAČKE
             </button>
           </div>
+          <p
+            style={{
+              fontSize: "18px",
+              marginLeft: "20px",
+              marginBottom: "10px",
+            }}
+          >
+            Kategorija
+          </p>
+          <div className="category-filter">
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Hrana
+            </label>
+
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Dodaci prehrani
+            </label>
+
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Igračke
+            </label>
+
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Sredstva za dlaku
+            </label>
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Povodci
+            </label>
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Lijekovi
+            </label>
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Modni dodaci
+            </label>
+          </div>
+          <p
+            style={{
+              fontSize: "18px",
+              marginLeft: "20px",
+              marginBottom: "10px",
+              marginTop: "10px",
+            }}
+          >
+            Cijena
+          </p>
+          <div className="price-filter">
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              &lt; 30 kn
+            </label>
+
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              30 - 50 kn
+            </label>
+
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              50 - 100 kn
+            </label>
+
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              100 - 150 kn
+            </label>
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              150 - 200 kn
+            </label>
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              &gt; 200 kn
+            </label>
+          </div>
+          <p
+            style={{
+              fontSize: "18px",
+              marginLeft: "20px",
+              marginBottom: "10px",
+              marginTop: "10px",
+            }}
+          >
+            Namjena
+          </p>
+          <div className="purpose-filter">
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Junior
+            </label>
+
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Adult
+            </label>
+
+            <label class="container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              Senior
+            </label>
+          </div>
+          <button className="cancel">PONIŠTI</button>
+          <button className="search">PRETRAŽI</button>
         </div>
       </div>
     )
