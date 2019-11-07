@@ -37,25 +37,3 @@ p {
   font-family: "Roboto", sans-serif;
   color: #3f3f3f;
 }
-
-.filter-buttons {
-  display: flex;
-  justify-content: center;
-}
-.animal-filter {
-  background-color: #ffb5b5;
-  border: none;
-  color: white;
-  text-align: center;
-  display: inline-block;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  outline: none;
-  font-size: 25px;
-  padding: 15px 32px;
-  margin-bottom: 20px;
-}
-
-.animal-filter:focus {
-  outline: none !important;
-}

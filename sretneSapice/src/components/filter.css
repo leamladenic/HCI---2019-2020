@@ -1,0 +1,42 @@
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+}
+.dog-shop,
+.cat-shop {
+  background-color: #ffb5b5;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 25px;
+  padding: 15px 32px;
+  margin-bottom: 20px;
+}
+
+.dog-shop,
+.cat-shop:focus {
+  outline: none !important;
+}
+
+.cat-shop-active,
+.dog-shop-active {
+  background-color: #e77f8a;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 25px;
+  padding: 15px 32px;
+  margin-bottom: 20px;
+}
+.cat-shop-active,
+.dog-shop-active:focus {
+  outline: none !important;
+}

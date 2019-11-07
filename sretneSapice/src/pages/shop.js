@@ -3,6 +3,7 @@ import { Link, withAssetPrefix } from "gatsby"
 
 import Layout from "../components/layout"
 import "../components/shop.css"
+import Filter from "../components/filter"
 
 import SEO from "../components/seo"
 
@@ -35,14 +36,7 @@ class ShopPage extends React.Component {
               >
                 Filteri
               </p>
-              <div className="filter-buttons">
-                <button id="dog-shop" className="animal-filter">
-                  PSI
-                </button>
-                <button id="cat-shop" className="animal-filter">
-                  MAČKE
-                </button>
-              </div>
+              <Filter />
             </div>
             <div
               className="text-shop"
