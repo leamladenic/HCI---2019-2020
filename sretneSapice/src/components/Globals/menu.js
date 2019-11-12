@@ -56,7 +56,7 @@ class Menu extends React.Component {
           }
         `}
         render={data => (
-          <div className="container">
+          <div className="container-menu">
             <div className="menu-button" onClick={this.handleMenuButtonClick}>
               <svg
                 viewBox="0 0 96 96"
@@ -129,7 +129,7 @@ class Menu extends React.Component {
                   ))}
                 </ul>
               )}
-              <div className="search">
+              <div className="search-menu">
                 <input
                   className="search-field"
                   type="text"

@@ -15,6 +15,7 @@ export default class Header extends Component {
           maxHeight: "80px",
           display: "flex",
           flexDirection: "row",
+          padding: "20px",
 
           justifyContent: "space-between",
         }}

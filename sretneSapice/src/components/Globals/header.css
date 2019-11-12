@@ -1,0 +1,27 @@
+:root {
+  --smallerDevicesMaxWidth: 210px;
+  --maxWidth: 700px;
+  --minWidth: 701px;
+  --maxHeight: 600px;
+  --mainColor: #fc8f9b;
+}
+
+.navbar {
+  background-color: var(--mainColor);
+  max-height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: maxWidth) {
+  .navbar {
+    height: 54px;
+  }
+}
+
+@media (min-width: minWidth) and (min-height: maxHeight) {
+  .navbar {
+    height: 72px;
+  }
+}
