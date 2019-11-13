@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Sretne Šapice`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Aplikacija za udomljavanje zivotinja`,
+    author: `@sretneSapice`,
     menuItems: [
       {
         text: "HOME",
-        link: "./",
+        link: "/",
       },
       {
         text: "BLOG",

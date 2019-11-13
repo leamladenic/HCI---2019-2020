@@ -1,5 +1,4 @@
 body {
-  background-color: #e5e5e5;
 }
 .main-div {
   display: grid;
@@ -7,6 +6,7 @@ body {
   grid-template-areas: "left-div . right-div";
   align-items: center;
   justify-items: center;
+  background-color: #e5e5e5;
 }
 
 .left-div {

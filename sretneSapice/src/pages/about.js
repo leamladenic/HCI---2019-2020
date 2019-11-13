@@ -1,20 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
-import AboutImg from "../images/big_hero_about.jpg"
-
+import { graphql, withAssetPrefix } from "gatsby"
+import Image from "gatsby-image"
 import Layout from "../components/layout"
 
-const AboutPage = () => (
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "big_hero_about.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+const AboutPage = ({ data }) => (
   <Layout>
-    <img
-      src={AboutImg}
-      style={{
-        position: " block",
-        marginTop: "",
-        left: "0px",
-        top: "123px",
-      }}
-    ></img>
+    <Image
+      fluid={data.file.childImageSharp.fluid}
+      style={{ postition: "block", zIndex: "-10" }}
+    />
 
     <div
       style={{
