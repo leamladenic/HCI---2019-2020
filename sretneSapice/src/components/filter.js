@@ -68,12 +68,6 @@ class Filter extends React.Component {
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              Dodaci prehrani
-            </label>
-
-            <label class="container">
-              <input type="checkbox" />
-              <span class="checkmark"></span>
               Igračke
             </label>
 
@@ -87,11 +81,7 @@ class Filter extends React.Component {
               <span class="checkmark"></span>
               Povodci
             </label>
-            <label class="container">
-              <input type="checkbox" />
-              <span class="checkmark"></span>
-              Lijekovi
-            </label>
+
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
