@@ -1,17 +1,15 @@
 import React from "react"
-import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
-import Link from "gatsby"
+
 import Layout from "../components/layout"
 import "../components/shop.css"
 import Filter from "../components/animalFilter"
-
+import AdoptDogs from "../components/AdoptDogs"
 import SEO from "../components/seo"
 
 const ShopPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Psi" />
+      <SEO title="Udomi psa" />
       <div className="main-div">
         <div className="left-div">
           <div className="navigation-mark">
@@ -54,7 +52,9 @@ const ShopPage = ({ data }) => {
           </div>
         </div>
 
-        <div className="right-div"></div>
+        <div className="right-div">
+          <AdoptDogs />
+        </div>
       </div>
     </Layout>
   )

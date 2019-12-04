@@ -56,7 +56,7 @@ class Filter extends React.Component {
                     marginBottom: "10px",
                   }}
                 >
-                  Starost
+                  Veličina
                 </p>
 
                 <label class="container">
@@ -107,7 +107,16 @@ class Filter extends React.Component {
                 >
                   Pasmina
                 </p>
-                <input type="text" name="breed" className="inputBreed" />
+                <label class="container">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  Čistokrvni
+                </label>
+                <label class="container">
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                  Mješanci
+                </label>
               </label>
             </div>
           </div>
