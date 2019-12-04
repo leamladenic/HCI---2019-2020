@@ -134,6 +134,10 @@ class Menu extends React.Component {
                   className="search-field"
                   type="text"
                   placeholder="Unesite tekst..."
+                  style={{
+                    outline: "none !important",
+                    border: "none !important",
+                  }}
                 ></input>
                 <div className="v1"></div>
                 <button className="search-button" type="submit">

@@ -138,3 +138,14 @@
 .search:focus {
   outline: none !important;
 }
+
+.inputBreed {
+  border-radius: 10px;
+  box-shadow: none !important;
+  border: 1px solid #7e7e7e !important;
+  height: 35 px;
+}
+
+.inputBreed:focus {
+  outline: none !important;
+}
