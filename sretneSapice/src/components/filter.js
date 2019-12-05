@@ -49,6 +49,7 @@ class Filter extends React.Component {
               MAČKE
             </button>
           </div>
+
           <p
             style={{
               fontSize: "18px",

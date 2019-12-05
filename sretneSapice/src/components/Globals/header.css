@@ -1,7 +1,7 @@
 :root {
   --smallerDevicesMaxWidth: 210px;
-  --maxWidth: 700px;
-  --minWidth: 701px;
+  --maxWidth: 400px;
+  --minWidth: 301px;
   --maxHeight: 600px;
   --mainColor: #fc8f9b;
 }

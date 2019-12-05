@@ -1,5 +1,5 @@
 import React, { lazy } from "react"
-
+import "./input.module.css"
 import "../components/filter.css"
 
 class Filter extends React.Component {

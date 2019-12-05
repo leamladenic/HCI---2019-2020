@@ -1,7 +1,4 @@
 import React from "react"
-import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
-import Link from "gatsby"
 import Layout from "../components/layout"
 import "../components/shop.css"
 import Filter from "../components/animalFilter"
