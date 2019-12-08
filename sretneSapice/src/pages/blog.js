@@ -1,13 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import "../components/shop.css"
+import Article from "../components/Article"
 
 import SEO from "../components/seo"
 
 const BlogPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Udomi mačku" />
+      <SEO title="Blog" />
       <div className="main-div">
         <div className="left-div">
           <div className="navigation-mark">
@@ -38,7 +39,22 @@ const BlogPage = ({ data }) => {
           </div>
         </div>
 
-        <div className="right-div"></div>
+        <div
+          className="right-div"
+          style={{
+            marginTop: "-33px",
+          }}
+        >
+          <section className="py-5">
+            <div className="container">
+              <div className="row">
+                {data.blog.edges.map(({ node: article }) => {
+                  return <Article key={article.id} product={article} />
+                })}
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </Layout>
   )
@@ -51,17 +67,20 @@ export const query = graphql`
     blog: allContentfulBlogArticles {
       edges {
         node {
+          date(formatString: "MMMM-D-YYYY")
+          title
+          smallText {
+            smallText
+          }
           article {
             article
           }
-          date(formatString: "MMMM-D-YYYY")
           image {
-            fluid(maxHeight: 1000) {
+            fluid(maxHeight: 500) {
               src
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
-          title
         }
       }
     }
