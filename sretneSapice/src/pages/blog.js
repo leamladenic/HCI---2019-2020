@@ -9,9 +9,56 @@ import SEO from "../components/seo"
 const BlogPage = ({ data }) => {
   const posts = data.blog.edges
   let years = []
+  let months = []
   posts.map(year => years.push(year.node.date.substr(6, 4)))
+  posts.map(month => months.push(month.node.date.substr(0, 2)))
   let unique = [...new Set(years)]
+  let unique_months = [...new Set(months)]
   unique.sort()
+  unique_months.sort()
+
+  let mymonths = []
+
+  unique_months.forEach(monthNum => {
+    switch (monthNum) {
+      case "01":
+        mymonths.push("siječanj")
+        break
+      case "02":
+        mymonths.push("veljača")
+        break
+      case "03":
+        mymonths.push("ožujak")
+        break
+      case "04":
+        mymonths.push("travanj")
+        break
+      case "05":
+        mymonths.push("svibanj")
+        break
+      case "06":
+        mymonths.push("lipanj")
+        break
+      case "07":
+        mymonths.push("srpanj")
+        break
+      case "08":
+        mymonths.push("kolovoz")
+        break
+      case "09":
+        mymonths.push("rujan")
+        break
+      case "10":
+        mymonths.push("listopad")
+        break
+      case "11":
+        mymonths.push("studeni")
+        break
+      case "12":
+        mymonths.push("prosinac")
+        break
+    }
+  })
 
   return (
     <Layout>
@@ -44,9 +91,29 @@ const BlogPage = ({ data }) => {
               <div className="year-container">
                 <p className="year-label">Godina</p>
                 <select className="blog-date-items">
+                  <option value="" disabled selected>
+                    Izaberite godinu
+                  </option>
                   {unique.map(year => (
                     <option key={year} className="year-item">
                       {year}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </label>
+
+            <label>
+              <div className="year-container">
+                <p className="year-label">Mjesec</p>
+                <select className="blog-date-items">
+                  <option value="" disabled selected>
+                    Izaberite mjesec
+                  </option>
+
+                  {mymonths.map(month => (
+                    <option key={month} className="year-item">
+                      {month}
                     </option>
                   ))}
                 </select>

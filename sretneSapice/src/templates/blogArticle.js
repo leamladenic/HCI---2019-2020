@@ -62,7 +62,7 @@ export const query = graphql`
         article
         json
       }
-      date(formatString: "MM-DD-YYYY")
+      date(formatString: "DD-MM-YYYY")
       title
       slug
       image {
