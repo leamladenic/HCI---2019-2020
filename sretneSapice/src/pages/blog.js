@@ -7,6 +7,12 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 
 const BlogPage = ({ data }) => {
+  const posts = data.blog.edges
+  let years = []
+  posts.map(year => years.push(year.node.date.substr(6, 4)))
+  let unique = [...new Set(years)]
+  unique.sort()
+
   return (
     <Layout>
       <SEO title="Blog" />
@@ -38,9 +44,9 @@ const BlogPage = ({ data }) => {
               <div className="year-container">
                 <p className="year-label">Godina</p>
                 <select className="blog-date-items">
-                  {data.blog.edges.map(({ node: year }) => (
-                    <option key={year.date} className="year-item">
-                      {year.date.substr(6, 4)}
+                  {unique.map(year => (
+                    <option key={year} className="year-item">
+                      {year}
                     </option>
                   ))}
                 </select>
