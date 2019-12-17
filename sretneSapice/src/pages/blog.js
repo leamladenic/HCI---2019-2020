@@ -35,7 +35,16 @@ const BlogPage = ({ data }) => {
               Filteri
             </p>
             <label>
-              <input type="text"></input>
+              <div className="year-container">
+                <p className="year-label">Godina</p>
+                <select className="blog-date-items">
+                  {data.blog.edges.map(({ node: year }) => (
+                    <option key={year.date} className="year-item">
+                      {year.date.substr(6, 4)}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </label>
           </div>
         </div>
@@ -71,7 +80,7 @@ export const query = graphql`
           article {
             article
           }
-          date(formatString: "MMMM-DD-YYYY")
+          date(formatString: "MM-DD-YYYY")
           image {
             fluid {
               src
