@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import "./bootstrap.min.css"
 import "./layout.css"
@@ -21,7 +20,7 @@ const Layout = ({ children }) => (
     {children}
     <footer
       style={{
-        maxHeight: "130px",
+        minHeight: "150px",
         backgroundColor: "#ffb5b5",
         position: "fixed",
         left: "0px",
@@ -37,14 +36,14 @@ const Layout = ({ children }) => (
       <img
         src={logo}
         style={{
-          height: "55px",
+          height: "60px",
           paddingTop: "15px",
         }}
       ></img>
       <div
         className="quote"
         style={{
-          fontSize: "20px",
+          fontSize: "22px",
           fontStyle: "italic",
           marginTop: "-15px",
         }}
@@ -54,10 +53,10 @@ const Layout = ({ children }) => (
       <div
         className="author"
         style={{
-          fontSize: "10px",
+          fontSize: "13px",
           fontStyle: "italic",
 
-          paddingTop: "10px",
+          paddingTop: "15px",
         }}
       >
         Louis Sabin

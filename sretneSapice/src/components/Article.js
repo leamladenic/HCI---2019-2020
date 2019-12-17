@@ -1,74 +1,32 @@
 import React from "react"
 import Img from "gatsby-image"
 import Button from "react-bootstrap/Button"
+import { Link } from "gatsby"
+import "./article.css"
 
 export default function Article({ product }) {
   return (
-    <div
-      className="articlesCards"
-      style={{
-        margin: "10px",
-      }}
-    >
-      <div
-        className="card"
-        style={{
-          minHeight: "100%",
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
+    <div className="articlesCards">
+      <div className="card-article">
         <Img
           fluid={product.image.fluid}
-          className="card-img"
-          style={{ minHeight: "280px", maxHeight: "281px", maxWidth: "280px" }}
+          className="card-img card-image-article"
         />
-        <div className="card-body text-left" style={{ maxHeight: "120px" }}>
-          <div
-            className="card-text"
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          >
-            <div
-              className="priceButton"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "start",
-              }}
-            >
-              <h3 style={{ marginBottom: "20px", fontSize: "30px" }}>
-                {product.title}
-              </h3>
-              <p
-                style={{
-                  paddingRight: "20px",
-                  color: "#7e7e7e",
-                  marginTop: "-10px",
-                  fontSize: "20px",
-                }}
-              >
-                {product.smallText.smallText}
-              </p>
+        <div className="card-body text-left card-text-article">
+          <div className="card-text text-article">
+            <div className="article-button">
+              <h3 className="article-title">{product.title}</h3>
+              <p className="article-smalltext">{product.smallText.smallText}</p>
             </div>
-            <Button
-              className="btn mt3"
-              style={{
-                backgroundColor: "#fc8f9b",
-                color: "white",
-                outlineColor: "#fc8f9b",
-                minHeight: "60px",
-                maxHeight: "61px",
-                minWidth: "200px",
-                marginTop: "180px",
-              }}
-              variant="outline-success"
-            >
-              Nastavi čitati!
-            </Button>
+
+            <Link key={product.id} to={`/${product.slug}`} state={product}>
+              <Button
+                className="btn mt3 article-button-mod"
+                variant="outline-success"
+              >
+                Nastavi čitati!
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

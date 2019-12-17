@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import "../components/shop.css"
 import Article from "../components/Article"
+import { graphql } from "gatsby"
 
 import SEO from "../components/seo"
 
@@ -67,19 +68,20 @@ export const query = graphql`
     blog: allContentfulBlogArticles {
       edges {
         node {
-          date(formatString: "MMMM-D-YYYY")
-          title
-          smallText {
-            smallText
-          }
           article {
             article
           }
+          date(formatString: "MMMM-DD-YYYY")
           image {
-            fluid(maxHeight: 500) {
+            fluid {
               src
               ...GatsbyContentfulFluid_tracedSVG
             }
+          }
+          slug
+          title
+          smallText {
+            smallText
           }
         }
       }

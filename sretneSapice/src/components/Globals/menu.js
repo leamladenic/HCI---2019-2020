@@ -32,14 +32,6 @@ class Menu extends React.Component {
 
   render() {
     const { isSidebarOpen } = this.state
-    const style = {
-      overflow: "visible",
-      cursor: "pointer",
-      WebkitTapHighlightColor: "rgba(0,0,0,0)",
-      color: "white",
-      height: "35px",
-      marginLeft: "-20px",
-    }
 
     return (
       <StaticQuery
@@ -59,10 +51,10 @@ class Menu extends React.Component {
           <div className="container-menu">
             <div className="menu-button" onClick={this.handleMenuButtonClick}>
               <svg
+                className="svg-menu"
                 viewBox="0 0 96 96"
                 height="1em"
                 onClick={this.handleMenuButtonClick.bind(this)}
-                style={style}
               >
                 <Motion
                   style={{
@@ -137,12 +129,7 @@ class Menu extends React.Component {
                 ></input>
                 <div className="v1"></div>
                 <button className="search-button" type="submit">
-                  <GoSearch
-                    size={20}
-                    style={{
-                      marginLeft: "-20px",
-                    }}
-                  />
+                  <GoSearch className="GoSearch-element" size={20} />
                 </button>
               </div>
             </nav>

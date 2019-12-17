@@ -101,3 +101,16 @@ a:hover {
 .search-button:focus {
   outline: none !important;
 }
+
+.svg-menu {
+  overflow: visible;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: white;
+  height: 35px;
+  margin-left: -20px;
+}
+
+.GoSearch-element {
+  margin-left: -20px;
+}

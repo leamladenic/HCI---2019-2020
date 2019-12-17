@@ -138,3 +138,20 @@
 .search:focus {
   outline: none !important;
 }
+
+.filter-category-name {
+  font-size: 18px;
+  margin-left: -15px;
+  margin-bottom: 10px;
+}
+
+.filter-label {
+  display: flex;
+  flex-direction: column;
+}
+.filter-category-name-shop {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}

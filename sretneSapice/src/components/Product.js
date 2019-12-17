@@ -5,14 +5,10 @@ import Button from "react-bootstrap/Button"
 export default function Product({ product }) {
   return (
     <div className="col-10 col-sm-8 col-md-6 col-lg-4 my-3">
-      <div className="card" style={{ minHeight: "100%" }}>
-        <Img
-          fluid={product.image.fluid}
-          className="card-img-top"
-          style={{ minHeight: "300px", maxHeight: "301px" }}
-        />
-        <div className="card-body text-center">
-          <h4>{product.title}</h4>
+      <div className="card">
+        <Img fluid={product.image.fluid} className="card-img-top" />
+        <div className="card-body">
+          <p className="product-title">{product.title}</p>
           <div
             className="priceButton"
             style={{
@@ -21,18 +17,13 @@ export default function Product({ product }) {
               justifyContent: "space-between",
             }}
           >
-            <h3 style={{ paddingRight: "20px", marginTop: "10px" }}>
+            <h3 style={{ paddingRight: "20px", marginTop: "-13px" }}>
               {product.price} kn{" "}
             </h3>
             <Button
-              className="btn mt3"
-              style={{
-                backgroundColor: "#fc8f9b",
-                color: "white",
-                outlineColor: "#fc8f9b",
-                maxHeight: "60px",
-              }}
+              className="btn mt3 btn-animal"
               variant="outline-success"
+              style={{ marginTop: "-15px" }}
             >
               Dodaj u košaricu
             </Button>

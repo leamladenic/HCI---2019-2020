@@ -11,15 +11,7 @@ class Filter extends React.Component {
             <div className="animalFilters">
               {" "}
               <div className="animalAge">
-                <p
-                  style={{
-                    fontSize: "18px",
-                    marginLeft: "-15px",
-                    marginBottom: "10px",
-                  }}
-                >
-                  Starost
-                </p>
+                <p className="filter-category-name">Starost</p>
 
                 <label class="container">
                   <input type="checkbox" />
@@ -48,16 +40,8 @@ class Filter extends React.Component {
                   &gt; 10 godina
                 </label>
               </div>
-              <label style={{ display: "flex", flexDirection: "column" }}>
-                <p
-                  style={{
-                    fontSize: "18px",
-                    marginLeft: "-15px",
-                    marginBottom: "10px",
-                  }}
-                >
-                  Veličina
-                </p>
+              <label className="filter-label">
+                <p className="filter-category-name">Veličina</p>
 
                 <label class="container">
                   <input type="checkbox" />
@@ -76,16 +60,8 @@ class Filter extends React.Component {
                   &gt; 50 cm
                 </label>
               </label>
-              <label style={{ display: "flex", flexDirection: "column" }}>
-                <p
-                  style={{
-                    fontSize: "18px",
-                    marginLeft: "-15px",
-                    marginBottom: "10px",
-                  }}
-                >
-                  Spol
-                </p>
+              <label className="filter-label">
+                <p className="filter-category-name">Spol</p>
                 <label class="container">
                   <input type="checkbox" />
                   <span class="checkmark"></span>
@@ -97,16 +73,8 @@ class Filter extends React.Component {
                   Ženka
                 </label>
               </label>
-              <label style={{ display: "flex", flexDirection: "column" }}>
-                <p
-                  style={{
-                    fontSize: "18px",
-                    marginLeft: "-15px",
-                    marginBottom: "10px",
-                  }}
-                >
-                  Pasmina
-                </p>
+              <label className="filter-label">
+                <p className="filter-category-name">Pasmina</p>
                 <label class="container">
                   <input type="checkbox" />
                   <span class="checkmark"></span>

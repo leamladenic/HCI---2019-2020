@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "@emotion/core": "^10.0.22",
     "@mdx-js/react": "^1.5.1",
     "bootstrap": "^4.4.1",
@@ -21,8 +22,9 @@
     "gatsby-remark-wrap-iframe": "^1.1.0",
     "gatsby-source-airtable": "^2.0.12",
     "gatsby-source-contentful": "^2.1.66",
-    "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-source-filesystem": "^2.1.42",
     "gatsby-transformer-json": "^2.2.16",
+    "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",

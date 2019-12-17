@@ -50,15 +50,7 @@ class Filter extends React.Component {
             </button>
           </div>
 
-          <p
-            style={{
-              fontSize: "18px",
-              marginLeft: "20px",
-              marginBottom: "10px",
-            }}
-          >
-            Kategorija
-          </p>
+          <p className="filter-category-name-shop">Kategorija</p>
           <div className="category-filter">
             <label class="container">
               <input type="checkbox" />
@@ -89,16 +81,7 @@ class Filter extends React.Component {
               Modni dodaci
             </label>
           </div>
-          <p
-            style={{
-              fontSize: "18px",
-              marginLeft: "20px",
-              marginBottom: "10px",
-              marginTop: "10px",
-            }}
-          >
-            Cijena
-          </p>
+          <p className="filter-category-name-shop">Cijena</p>
           <div className="price-filter">
             <label class="container">
               <input type="checkbox" />
@@ -134,16 +117,7 @@ class Filter extends React.Component {
               &gt; 200 kn
             </label>
           </div>
-          <p
-            style={{
-              fontSize: "18px",
-              marginLeft: "20px",
-              marginBottom: "10px",
-              marginTop: "10px",
-            }}
-          >
-            Namjena
-          </p>
+          <p className="filter-category-name-shop">Namjena</p>
           <div className="purpose-filter">
             <label class="container">
               <input type="checkbox" />
