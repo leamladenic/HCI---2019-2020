@@ -2,7 +2,7 @@ import React from "react"
 import Product from "./Product"
 import { StaticQuery, graphql } from "gatsby"
 
-const getProducts = graphql`
+export const getProducts = graphql`
   {
     products: allContentfulMyProducts {
       edges {

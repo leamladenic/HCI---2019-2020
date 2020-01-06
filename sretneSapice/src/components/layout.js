@@ -7,10 +7,10 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-
+import { Link } from "gatsby"
 import "./bootstrap.min.css"
 import "./layout.css"
-import logo from "../images/logo_bijeli.png"
+import logo from "../images/logo_header.png"
 
 import Header from "./Globals/header"
 
@@ -20,46 +20,80 @@ const Layout = ({ children }) => (
     {children}
     <footer
       style={{
-        minHeight: "150px",
-        backgroundColor: "#ffb5b5",
+        minHeight: "200px",
+        backgroundColor: "#3A3A3A",
         position: "fixed",
         left: "0px",
         bottom: "0px",
         width: "100%",
-        marginBottom: "0px",
+
         color: "white",
         textAlign: "center",
         position: "inline",
-        paddingBottom: "20px",
+
+        marginTop: "5px",
       }}
     >
-      <img
-        src={logo}
-        style={{
-          height: "60px",
-          paddingTop: "15px",
-        }}
-      ></img>
       <div
         className="quote"
         style={{
           fontSize: "22px",
           fontStyle: "italic",
-          marginTop: "-15px",
+          paddingTop: "25px",
+          marginBottom: "-15px",
+          fontFamily: "Roboto, sans-serif",
         }}
       >
-        Koliko god da ste siromašni, ukoliko imate psa – vi ste zapravo bogati.
+        "Koliko god da ste siromašni, ukoliko imate psa – vi ste zapravo
+        bogati."
       </div>
       <div
         className="author"
         style={{
           fontSize: "13px",
           fontStyle: "italic",
-
+          fontFamily: "Roboto, sans-serif",
           paddingTop: "15px",
+          marginBottom: "-10px",
         }}
       >
         Louis Sabin
+      </div>
+      <div
+        className="second-part"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
+        <img
+          src={logo}
+          style={{
+            height: "110px",
+            paddingTop: "15px",
+            paddingLeft: "10px",
+          }}
+        ></img>
+        <div
+          className="footer-links"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            padding: "40px",
+            marginTop: "10px",
+          }}
+        >
+          <Link to="/about" className="footer-link">
+            O nama
+          </Link>
+          <Link to="/contact" className="footer-link">
+            Kontakt
+          </Link>
+          <Link to="/blog" className="footer-link">
+            Blog
+          </Link>
+        </div>
       </div>
     </footer>
   </div>

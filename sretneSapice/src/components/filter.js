@@ -1,9 +1,7 @@
 import React, { lazy } from "react"
 import { Link, withAssetPrefix } from "gatsby"
-
-import Layout from "../components/layout"
 import "../components/filter.css"
-
+import { getProducts } from "../components/Products"
 import SEO from "../components/seo"
 
 class Filter extends React.Component {
@@ -26,7 +24,7 @@ class Filter extends React.Component {
 
   render() {
     const btn_class_cat = this.state.catFilterActive
-      ? "cat-shop-active"
+      ? "cat-shop-active {this.props.products.animalCategory}"
       : "cat-shop"
     const btn_class_dog = this.state.dogFilterActive
       ? "dog-shop-active"

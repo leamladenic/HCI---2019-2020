@@ -9,7 +9,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Products from "../components/Products"
 
-const ShopPage = ({ data }) => {
+const ShopPage = ({}) => {
   return (
     <Layout>
       <SEO title="Trgovina" />

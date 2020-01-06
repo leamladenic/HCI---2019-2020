@@ -50,3 +50,6 @@ p {
   font-family: "Roboto", sans-serif;
   color: #3f3f3f;
 }
+.cat .dog {
+  display: hidden;
+}

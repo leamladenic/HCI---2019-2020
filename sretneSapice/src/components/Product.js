@@ -1,11 +1,13 @@
 import React from "react"
 import Img from "gatsby-image"
 import Button from "react-bootstrap/Button"
+import "../components/filter.css"
 
 export default function Product({ product }) {
+  console.log(product.animalCategory)
   return (
     <div className="col-10 col-sm-8 col-md-6 col-lg-4 my-3">
-      <div className="card">
+      <div className="card {product.animalCategory}">
         <Img fluid={product.image.fluid} className="card-img-top" />
         <div className="card-body">
           <p className="product-title">{product.title}</p>

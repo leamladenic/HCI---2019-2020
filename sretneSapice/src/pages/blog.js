@@ -119,6 +119,8 @@ const BlogPage = ({ data }) => {
                 </select>
               </div>
             </label>
+            <button className="cancel">PONIŠTI</button>
+            <button className="search">PRETRAŽI</button>
           </div>
         </div>
 
