@@ -24,6 +24,7 @@
     "gatsby-source-airtable": "^2.0.12",
     "gatsby-source-contentful": "^2.1.66",
     "gatsby-source-filesystem": "^2.1.42",
+    "gatsby-source-googlemaps-geocoding": "^1.0.0",
     "gatsby-transformer-json": "^2.2.16",
     "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.1",

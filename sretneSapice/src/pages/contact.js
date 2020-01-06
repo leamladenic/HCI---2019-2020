@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import "../components/contact.css"
 import { MdPhoneInTalk } from "react-icons/md"
 import { TiLocation } from "react-icons/ti"
+import SEO from "../components/seo"
 
 export const query = graphql`
   query {
@@ -18,8 +19,9 @@ export const query = graphql`
   }
 `
 
-const AboutPage = ({ data }) => (
+const ContactPage = ({ data }) => (
   <Layout>
+    <SEO title="Kontakt" />
     <Image
       fluid={data.file.childImageSharp.fluid}
       style={{ postition: "block", zIndex: "-10" }}
@@ -95,4 +97,4 @@ const AboutPage = ({ data }) => (
   </Layout>
 )
 
-export default AboutPage
+export default ContactPage

@@ -29,7 +29,7 @@ module.exports = {
         link: "/shop/",
       },
       {
-        text: "KONTAKTI",
+        text: "KONTAKT",
         link: "/contact/",
       },
       {
@@ -82,6 +82,13 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-source-googlemaps-geocoding",
+      options: {
+        key: "YOUR_GOOGLE_MAPS_GEOCODING_API_KEY",
+        address: "ADDRESS_YOU_ARE_GEOCODING",
       },
     },
 
