@@ -11,6 +11,7 @@ const getProducts = graphql`
           gender
           name
           size
+          slug
           breed
           image {
             fluid {

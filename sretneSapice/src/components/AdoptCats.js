@@ -12,6 +12,7 @@ const getProducts = graphql`
           gender
           name
           size
+          slug
           image {
             fluid(maxHeight: 500) {
               src
