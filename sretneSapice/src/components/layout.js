@@ -18,22 +18,7 @@ const Layout = ({ children }) => (
   <div>
     <Header />
     {children}
-    <footer
-      style={{
-        minHeight: "200px",
-        backgroundColor: "#3A3A3A",
-        position: "fixed",
-        left: "0px",
-        bottom: "0px",
-        width: "100%",
-
-        color: "white",
-        textAlign: "center",
-        position: "inline",
-
-        marginTop: "5px",
-      }}
-    >
+    <footer className="footer-div">
       <div
         className="quote"
         style={{

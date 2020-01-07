@@ -16,6 +16,21 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.footer-div {
+  min-height: 200px;
+  background-color: #3a3a3a;
+
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+
+  color: white;
+  text-align: center;
+  position: inline;
+
+  margin-top: 5px;
+}
+
 article,
 aside,
 details,

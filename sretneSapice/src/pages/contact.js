@@ -16,6 +16,13 @@ export const query = graphql`
         }
       }
     }
+    map: file(relativePath: { eq: "location.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 900) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
@@ -27,27 +34,9 @@ const ContactPage = ({ data }) => (
       style={{ postition: "block", zIndex: "-10" }}
     />
 
-    <div
-      style={{
-        marginLeft: "130px",
-        marginRight: "130px",
-      }}
-    >
-      <h1
-        style={{
-          marginTop: "30px",
-          marginBottom: "30px",
-          fontFamily: "'Roboto', sans-serif",
-          fontStyle: "normal",
-          fontSize: "60px",
-          color: "#e77f8a",
-        }}
-      >
-        Kontakt
-      </h1>
-    </div>
     <div className="contact-container">
       <div className="contact-form">
+        <h1 className="contact-label">Kontakt</h1>
         <form
           className="my-contact-form"
           method="post"
@@ -67,7 +56,7 @@ const ContactPage = ({ data }) => (
           </label>
           <label className="form-item-contact">
             Poruka
-            <textarea name="message" id="message" rows="6" />
+            <textarea name="message" id="message" rows="8" />
           </label>
           <div className="buttons-form-contact">
             <button type="submit" className="submit-contact-button">
@@ -82,14 +71,24 @@ const ContactPage = ({ data }) => (
         </form>
       </div>
       <div className="contact-map">
+        <div className="contact-img-div">
+          <Image
+            className="contact-img"
+            fluid={data.map.childImageSharp.fluid}
+          />
+        </div>
         <div className="info-contact">
           <div style={{ display: "flex" }}>
             <MdPhoneInTalk className="icon-contact" size={50} />
             <p className="text-contact">0915675324</p>
           </div>
-          <div style={{ display: "flex", flexDirection: "row" }}>
+          <div
+            style={{
+              display: "flex",
+            }}
+          >
             <TiLocation className="icon-contact" size={50} />
-            <p className="text-contact">Ul. Ruđera Boškovića 32, 21000</p>
+            <p className="text-contact">Kozjačka ul. 16, Solin</p>
           </div>
         </div>
       </div>
