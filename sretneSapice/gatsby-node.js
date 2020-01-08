@@ -14,6 +14,28 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  const resultDogs = await graphql(`
+    {
+      allContentfulDogs {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
+  const resultCats = await graphql(`
+    {
+      allContentfulCats {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
 
   result.data.allContentfulBlogArticles.edges.forEach(({ node }) => {
     createPage({
@@ -26,22 +48,7 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-}
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const result = await graphql(`
-    {
-      allContentfulDogs {
-        edges {
-          node {
-            slug
-          }
-        }
-      }
-    }
-  `)
-
-  result.data.allContentfulDogs.edges.forEach(({ node }) => {
+  resultDogs.data.allContentfulDogs.edges.forEach(({ node }) => {
     createPage({
       path: node.slug,
       component: path.resolve(`./src/templates/popAdoptDog.js`),
@@ -52,22 +59,7 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-}
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-  const result = await graphql(`
-    {
-      allContentfulCats {
-        edges {
-          node {
-            slug
-          }
-        }
-      }
-    }
-  `)
-
-  result.data.allContentfulCats.edges.forEach(({ node }) => {
+  resultCats.data.allContentfulCats.edges.forEach(({ node }) => {
     createPage({
       path: node.slug,
       component: path.resolve(`./src/templates/popAdoptCat.js`),
