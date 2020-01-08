@@ -1,0 +1,43 @@
+.close-button {
+  color: #fc8f9b !important;
+  align-content: left;
+}
+.close-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.popImageItem {
+  width: 100%;
+  height: 100%;
+}
+.popImage {
+  width: 50%;
+}
+.popInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.popInfoDetails {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.info-text {
+  font-size: 23px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.infoDetail {
+  display: flex;
+}
+.infoDetailVet {
+  display: flex;
+  flex-direction: column;
+}

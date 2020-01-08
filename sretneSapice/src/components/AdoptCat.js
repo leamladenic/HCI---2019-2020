@@ -18,9 +18,7 @@ export default function AdoptCat({ product }) {
               <h3 className="animal-name">{product.name}</h3>
               <p className="animal-age">{age}</p>
             </div>
-            <Button className="btn mt3 btn-animal" variant="outline-success">
-              Upoznaj me!
-            </Button>
+
             <Link
               to={`/${product.slug}`}
               product={product}
@@ -28,7 +26,9 @@ export default function AdoptCat({ product }) {
                 modal: true,
               }}
             >
-              Login
+              <Button className="btn mt3 btn-animal" variant="outline-success">
+                Upoznaj me!
+              </Button>
             </Link>
           </div>
         </div>

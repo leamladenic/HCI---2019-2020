@@ -1,28 +1,89 @@
 import React from "react"
 import { Link } from "gatsby"
 import { ModalRoutingContext } from "gatsby-plugin-modal-routing"
+import { graphql } from "gatsby"
+import { MdClose } from "react-icons/md"
+import "./popAnimal.css"
+import Image from "gatsby-image"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-const popAdoptDog = ({ product }) => (
-  <ModalRoutingContext.Consumer>
-    {({ modal, closeTo }) => (
-      <div>
-        {modal ? (
-          <Link to={closeTo}>Close</Link>
-        ) : (
-          <header>
-            <h1>Website Title</h1>
-          </header>
-        )}
+export default ({ data }) => {
+  const post = data.contentfulDogs
 
-        <h2>hehehe</h2>
+  const Bold = ({ children }) => <span className="bold">{children}</span>
+  const Text = ({ children }) => <p className="align-center">{children}</p>
 
-        <Link to="/">Go back to the homepage</Link>
-      </div>
-    )}
-  </ModalRoutingContext.Consumer>
-)
+  const options = {
+    renderMark: {
+      [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+    },
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (data, children) => <Text>{children}</Text>,
+    },
+  }
 
-export default popAdoptDog
+  const mypost = documentToReactComponents(post.vet.json, options)
+  return (
+    <ModalRoutingContext.Consumer>
+      {({ modal, closeTo }) => (
+        <div className="modalWindowContainer">
+          <div className="popContainer">
+            <div className="popImage">
+              <Image fluid={post.image.fluid} className="popImageItem" />
+            </div>
+            <div className="popInfo">
+              <div>
+                {modal ? (
+                  <Link to={closeTo}>
+                    <div className="close-link">
+                      <MdClose size={50} className="close-button" />
+                    </div>
+                  </Link>
+                ) : (
+                  <header>
+                    <h1>Pas</h1>
+                  </header>
+                )}
+              </div>
+              <div className="popInfoDetails">
+                {" "}
+                <div className="infoDetail">
+                  <h3>IME: </h3>
+                  <p className="info-text">{post.name}</p>
+                </div>
+                <div className="infoDetail">
+                  <h3>PASMINA: </h3>
+                  <p className="info-text">{post.breed}</p>
+                </div>
+                <div className="infoDetail">
+                  <h3>SPOL: </h3>
+                  <p className="info-text">{post.gender}</p>
+                </div>
+                <div className="infoDetail">
+                  <h3>ROĐENDAN: </h3>
+                  <p className="info-text">{post.birthday}</p>
+                </div>
+                <div className="infoDetail">
+                  <h3>VISINA: </h3>
+                  <p className="info-text">{post.size + "cm"} </p>
+                </div>
+                <div className="infoDetail">
+                  <h3>BROJ ČIPA: </h3>
+                  <p className="info-text">{post.chip}</p>
+                </div>
+                <div className="infoDetailVet">
+                  <h3>VETERINARSKA OBRADA: </h3>
+                  <p className="info-text">{mypost}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </ModalRoutingContext.Consumer>
+  )
+}
 
 export const query = graphql`
   query($slug: String!) {
@@ -44,6 +105,7 @@ export const query = graphql`
       }
       name
       slug
+      size
     }
   }
 `

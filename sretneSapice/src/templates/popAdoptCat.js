@@ -1,28 +1,30 @@
 import React from "react"
 import { Link } from "gatsby"
 import { ModalRoutingContext } from "gatsby-plugin-modal-routing"
+import { graphql } from "gatsby"
+import { MdClose } from "react-icons/md"
 
-const popAdoptCat = ({ product }) => (
-  <ModalRoutingContext.Consumer>
-    {({ modal, closeTo }) => (
-      <div>
-        {modal ? (
-          <Link to={closeTo}>Close</Link>
-        ) : (
-          <header>
-            <h1>Website Title</h1>
-          </header>
-        )}
+export default ({ data }) => {
+  return (
+    <ModalRoutingContext.Consumer>
+      {({ modal, closeTo }) => (
+        <div>
+          {modal ? (
+            <Link to={closeTo}>Close</Link>
+          ) : (
+            <header>
+              <h1>Website Title</h1>
+            </header>
+          )}
 
-        <h2>{product.name}</h2>
+          <h2>{data.contentfulCats.name}</h2>
 
-        <Link to="/">Go back to the homepage</Link>
-      </div>
-    )}
-  </ModalRoutingContext.Consumer>
-)
-
-export default popAdoptCat
+          <Link to="/">Go back to the homepage</Link>
+        </div>
+      )}
+    </ModalRoutingContext.Consumer>
+  )
+}
 
 export const query = graphql`
   query($slug: String!) {
