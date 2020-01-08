@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import Button from "react-bootstrap/Button"
 import "./animalCard.css"
 import { Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 
 export default function AdoptDog({ product }) {
   let age = product.age
@@ -42,6 +43,7 @@ export const query = graphql`
       edges {
         node {
           age
+          size
           breed
           gender
           name

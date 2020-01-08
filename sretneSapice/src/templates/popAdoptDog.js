@@ -76,6 +76,14 @@ export default ({ data }) => {
                   <h3>VETERINARSKA OBRADA: </h3>
                   <p className="info-text">{mypost}</p>
                 </div>
+                <div className="popButtons">
+                  <Link to={closeTo}>
+                    <button className="cancelpop">ODUSTANI</button>
+                  </Link>
+                  <Link to={/adoptForm/}>
+                    <button className="searchpop">UDOMI ME</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 export default function AdoptCat({ product }) {
   let age = product.age
-  console.log(product)
+
   return (
     <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
       <div className="card">
@@ -43,6 +43,7 @@ export const query = graphql`
       edges {
         node {
           age
+          size
           breed
           gender
           name
