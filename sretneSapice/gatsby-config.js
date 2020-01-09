@@ -36,10 +36,6 @@ module.exports = {
         text: "O NAMA",
         link: "/about/",
       },
-      {
-        text: "Q/A",
-        link: "/qa/",
-      },
     ],
   },
 

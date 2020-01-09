@@ -1,0 +1,87 @@
+.big-hero-photo {
+  position: block;
+  z-index: -10;
+}
+
+.big-quote-text {
+  font-size: 80px;
+  padding: 40px;
+}
+.big-quote,
+.second-quote {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.second-quote {
+  width: 1000px;
+  flex-direction: column;
+}
+
+.div-second-quote {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.second-quote-text {
+  font-size: 65px;
+  text-align: center;
+}
+
+.author-of-quote {
+  font-size: 35px;
+  margin-left: 70%;
+}
+
+.over-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.choose-product,
+.adopt-animal {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.choose-animal {
+  width: 100%;
+  height: 250px;
+  background-color: #ffd2d2;
+}
+
+.vl {
+  border-left: 4px solid white;
+  height: 250px;
+}
+.choose-animal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.dog-icon,
+.cat-icon {
+  color: white;
+  margin: 50px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.dog-icon,
+.cat-arrow {
+  transform: scaleX(-1);
+}
+.button-click-arrow {
+  color: white;
+}
