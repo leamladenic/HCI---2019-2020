@@ -2,6 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import Button from "react-bootstrap/Button"
 import "../components/filter.css"
+import { Link } from "gatsby"
+import "./productCard.css"
 
 export default function Product({ product }) {
   console.log(product.animalCategory)
@@ -10,7 +12,6 @@ export default function Product({ product }) {
       <div className="card {product.animalCategory}">
         <Img fluid={product.image.fluid} className="card-img-top" />
         <div className="card-body">
-          <p className="product-title">{product.title}</p>
           <div
             className="priceButton"
             style={{
@@ -19,16 +20,30 @@ export default function Product({ product }) {
               justifyContent: "space-between",
             }}
           >
-            <h3 style={{ paddingRight: "20px", marginTop: "-13px" }}>
-              {product.price} kn{" "}
-            </h3>
-            <Button
-              className="btn mt3 btn-animal"
-              variant="outline-success"
-              style={{ marginTop: "-15px" }}
-            >
-              Dodaj u košaricu
-            </Button>
+            <div className="priceProduct">
+              <p className="product-title">{product.title}</p>
+              <h3 style={{ paddingRight: "20px", marginTop: "-13px" }}>
+                {product.price} kn{" "}
+              </h3>
+            </div>
+
+            <div className="buttonProduct">
+              {" "}
+              <Link
+                to={`/${product.slug}`}
+                product={product}
+                state={{
+                  modal: true,
+                }}
+              >
+                <Button
+                  className="btn mt3 btn-product"
+                  variant="outline-success"
+                >
+                  Pogledaj
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

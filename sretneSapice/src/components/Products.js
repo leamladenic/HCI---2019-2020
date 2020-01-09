@@ -10,6 +10,7 @@ export const getProducts = graphql`
           animalCategory
           category
           title
+          slug
           price
           image {
             fluid(maxHeight: 500) {

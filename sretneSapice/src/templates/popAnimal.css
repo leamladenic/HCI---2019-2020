@@ -62,17 +62,50 @@
   font-style: normal;
   outline: none;
   font-size: 25px;
-  padding: 8px 85px;
+
   margin-bottom: 20px;
 }
 .cancelpop {
   background-color: #7e7e7e;
+  padding: 10px 85px;
 }
 .searchpop {
   background-color: #fc8f9b;
+  padding: 10px 85px;
 }
 
 .cancelpop,
 .searchpop:focus {
   outline: none !important;
+}
+
+.infoDetailPrice {
+  display: flex;
+  flex-direction: row;
+  margin: -8px;
+}
+
+.info-text-price {
+  font-size: 45px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: -10px;
+}
+
+.infoDivPrice {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
+.pdvDiv {
+  font-size: 20px;
+  margin: -10px;
+}
+.pdvContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: first baseline;
+  margin-left: 10px;
+  margin-right: 10px;
 }

@@ -90,7 +90,10 @@ const BlogPage = ({ data }) => {
             <label>
               <div className="year-container">
                 <p className="year-label">Godina</p>
-                <select className="blog-date-items">
+                <select
+                  className="blog-date-items"
+                  onChange={e => console.log(e.target.value)}
+                >
                   <option value="" disabled selected>
                     Izaberite godinu
                   </option>

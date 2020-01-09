@@ -36,6 +36,17 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  const resultProducts = await graphql(`
+    {
+      allContentfulMyProducts {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
 
   result.data.allContentfulBlogArticles.edges.forEach(({ node }) => {
     createPage({
@@ -63,6 +74,17 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: node.slug,
       component: path.resolve(`./src/templates/popAdoptCat.js`),
+      context: {
+        // Data passed to context is available
+        // in page queries as GraphQL variables.
+        slug: node.slug,
+      },
+    })
+  })
+  resultProducts.data.allContentfulMyProducts.edges.forEach(({ node }) => {
+    createPage({
+      path: node.slug,
+      component: path.resolve(`./src/templates/popShop.js`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
