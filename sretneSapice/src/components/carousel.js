@@ -28,7 +28,7 @@ export const myProducts = graphql`
   }
 `
 
-export default function AdoptCats() {
+export default function Carousel() {
   const [activeItemIndex, setActiveItemIndex] = useState(0)
   const chevronWidth = 40
   return (
