@@ -2,6 +2,9 @@ import { StaticQuery, graphql } from "gatsby"
 import ItemsCarousel from "react-items-carousel"
 import React, { Component, useState } from "react"
 import "../components/index.css"
+import { Link } from "gatsby"
+import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io"
+import Image from "gatsby-image"
 
 export const myProducts = graphql`
   {
@@ -33,26 +36,58 @@ export default function AdoptCats() {
       query={myProducts}
       render={data => {
         return (
-          <div
-            className="main-carousel"
-            style={{ padding: `0 ${chevronWidth}px` }}
-          >
+          <div className="main-carousel" style={{ padding: `50px` }}>
             <ItemsCarousel
               infiniteLoop={true}
               requestToChangeActive={setActiveItemIndex}
               activeItemIndex={activeItemIndex}
-              numberOfCards={3}
+              numberOfCards={4}
               gutter={20}
-              leftChevron={<button>{"<"}</button>}
-              rightChevron={<button>{">"}</button>}
+              leftChevron={
+                <button className="arrow-carousel">
+                  <IoMdArrowDropleft />
+                </button>
+              }
+              rightChevron={
+                <button className="arrow-carousel">
+                  <IoMdArrowDropright />
+                </button>
+              }
               outsideChevron
               chevronWidth={chevronWidth}
             >
               {data.products.edges.map(({ node: product }) => {
                 return (
                   <div key={product.id}>
-                    <div style={{ height: 300, background: "#EEE" }}>
-                      First card
+                    <div style={{ height: 320, background: "white" }}>
+                      <div className="carousel-card">
+                        <div className="carousel-card-image">
+                          <Image
+                            fluid={product.image.fluid}
+                            className="carousel-card-image-image"
+                          />
+                        </div>
+                        <div className="card-bottom">
+                          {" "}
+                          <div className="carousel-card-info">
+                            <p className="price-label-carousel">CIJENA:</p>
+                            <p className="price-carousel">
+                              {product.price + "kn"}
+                            </p>
+                          </div>
+                          <div className="carousel-card-button">
+                            <Link
+                              to={`/${product.slug}`}
+                              product={product}
+                              state={{
+                                modal: true,
+                              }}
+                            >
+                              <button className="buy-carousel">Pogledaj</button>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )

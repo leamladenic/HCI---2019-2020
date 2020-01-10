@@ -39,11 +39,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div>
+      <div className="big-hero-photo-div">
         <Image
           fluid={data.file.childImageSharp.fluid}
           className="big-hero-photo"
         />
+        <span className="text-over-big-image">Dobro došli!</span>
       </div>
       <div className="big-quote">
         <p className="big-quote-text">Upoznaj me. Spasi me. Usreći me!</p>
@@ -54,7 +55,6 @@ const IndexPage = ({ data }) => {
           fluid={data.animals.childImageSharp.fluid}
           className="big-hero-photo"
         />
-
         <p className="over-image-text">Udomi ljubimca</p>
       </div>
       <div className="choose-animal">
@@ -93,6 +93,13 @@ const IndexPage = ({ data }) => {
       </div>
       <div>
         <Carousel />
+      </div>
+      <div className="more-products">
+        <Link to="/shop/">
+          <button className="more-products-text">
+            <span>Još proizvoda &nbsp;</span>
+          </button>
+        </Link>
       </div>
       <div className="div-second-quote">
         <div className="second-quote">
