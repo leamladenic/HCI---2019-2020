@@ -32,10 +32,29 @@ export default function login() {
             <div className="login-form-container">
               <div className="login-div-title">
                 {" "}
-                <div className="login-title">PRIJAVA</div>
+                <p className="login-title">PRIJAVA</p>
               </div>
 
-              <div className="login-form"></div>
+              <div className="login-form">
+                <form>
+                  <div className="login-form-block">
+                    <p className="login-form-text">Korisničko ime:</p>
+                    <input
+                      type="text"
+                      name="firstname"
+                      className="input-login"
+                    />
+                  </div>
+                  <div className="login-form-block">
+                    <p className="login-form-text">Zaporka:</p>
+                    <input
+                      type="password"
+                      name="password"
+                      className="input-login"
+                    />
+                  </div>
+                </form>
+              </div>
               <div className="remember-login"></div>
               <div className="login-register"></div>
               <div className="login-buttons"></div>
