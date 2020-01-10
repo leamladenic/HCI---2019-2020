@@ -5,9 +5,9 @@ import Layout from "../components/layout"
 import "../components/index.css"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-import BackgroundSlider from "gatsby-image-background-slider"
 import { FaDog, FaCat } from "react-icons/fa"
 import { TiArrowLeftOutline } from "react-icons/ti"
+import Carousel from "../components/carousel.js"
 
 export const query = graphql`
   query {
@@ -87,11 +87,13 @@ const IndexPage = ({ data }) => {
       <div className="choose-product">
         <Image
           fluid={data.products.childImageSharp.fluid}
-          className="big-hero-photo"
+          className="big-hero-photo product-hero"
         />
         <p className="over-image-text">Naši proizvodi</p>
       </div>
-
+      <div>
+        <Carousel />
+      </div>
       <div className="div-second-quote">
         <div className="second-quote">
           <p className="second-quote-text">
