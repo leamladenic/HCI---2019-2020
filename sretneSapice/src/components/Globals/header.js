@@ -51,108 +51,112 @@ export default class Header extends Component {
           }
         `}
         render={data => (
+        
           <header className="navbar navbar-expand-sm ">
-            <div>
-              <div className="container-menu">
-                <div
-                  className="menu-button"
-                  onClick={this.handleMenuButtonClick}
-                >
-                  <svg
-                    className="svg-menu"
-                    viewBox="0 0 96 96"
-                    height="1em"
-                    onClick={this.handleMenuButtonClick.bind(this)}
+            
+              <div class="header-menu">
+                  <div
+                    className="menu-button"
+                    onClick={this.handleMenuButtonClick}
                   >
-                    <Motion
-                      style={{
-                        x: spring(
-                          this.state.isSidebarOpen ? 1 : 0,
-                          presets.wobbly
-                        ),
-                        y: spring(
-                          this.state.isSidebarOpen ? 0 : 1,
-                          presets.wobbly
-                        ),
-                      }}
+                    <svg
+                      className="svg-menu"
+                      viewBox="0 0 96 96"
+                      height="1em"
+                      onClick={this.handleMenuButtonClick.bind(this)}
                     >
-                      {({ x, y }) => (
-                        <g
-                          id="navicon"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="14"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <line
-                            transform={`translate(${x * 12}, ${x *
-                              -7}) rotate(${x * 45}, 7, 26)`}
-                            x1="7"
-                            y1="26"
-                            x2="89"
-                            y2="26"
-                          />
-                          <line
-                            transform={`translate(${x * 12}, ${x *
-                              7}) rotate(${x * -45}, 7, 70)`}
-                            x1="7"
-                            y1="70"
-                            x2="89"
-                            y2="70"
-                          />
-                          <line
-                            transform={`translate(${x * -96})`}
-                            opacity={y}
-                            x1="7"
-                            y1="48"
-                            x2="89"
-                            y2="48"
-                          />
-                        </g>
-                      )}
-                    </Motion>
-                  </svg>
-                </div>
-
-                <nav className={`nav ${isSidebarOpen ? "show" : "nav"}`}>
-                  <GoTriangleUp className="triangle" size={70} />
-
-                  {data && (
-                    <ul className="menu-items">
-                      {data.site.siteMetadata.menuItems.map(item => (
-                        <li key={item.text} className="menu-list">
-                          <a
-                            href={item.link}
-                            className="menu-link"
-                            sytle={{
-                              TextDecoration: "none",
-                            }}
+                      <Motion
+                        style={{
+                          x: spring(
+                            this.state.isSidebarOpen ? 1 : 0,
+                            presets.wobbly
+                          ),
+                          y: spring(
+                            this.state.isSidebarOpen ? 0 : 1,
+                            presets.wobbly
+                          ),
+                        }}
+                      >
+                        {({ x, y }) => (
+                          <g
+                            id="navicon"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="14"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
-                            {item.text}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                  <div className="search-menu">
-                    <input
-                      className="search-field"
-                      type="text"
-                      placeholder="Unesite tekst..."
-                    ></input>
-                    <div className="v1"></div>
-
-                    <button className="search-button" type="submit">
-                      <GoSearch className="GoSearch-element" size={20} />
-                    </button>
+                            <line
+                              transform={`translate(${x * 12}, ${x *
+                                -7}) rotate(${x * 45}, 7, 26)`}
+                              x1="7"
+                              y1="26"
+                              x2="89"
+                              y2="26"
+                            />
+                            <line
+                              transform={`translate(${x * 12}, ${x *
+                                7}) rotate(${x * -45}, 7, 70)`}
+                              x1="7"
+                              y1="70"
+                              x2="89"
+                              y2="70"
+                            />
+                            <line
+                              transform={`translate(${x * -96})`}
+                              opacity={y}
+                              x1="7"
+                              y1="48"
+                              x2="89"
+                              y2="48"
+                            />
+                          </g>
+                        )}
+                      </Motion>
+                    </svg>
                   </div>
-                </nav>
-              </div>
+                
+
+                  <nav className={`nav ${isSidebarOpen ? "show" : "nav"}`}>
+                    <GoTriangleUp className="triangle" size={70} />
+
+                    {data && (
+                      <ul className="menu-items">
+                        {data.site.siteMetadata.menuItems.map(item => (
+                          <li key={item.text} className="menu-list">
+                            <a
+                              href={item.link}
+                              className="menu-link"
+                              sytle={{
+                                TextDecoration: "none",
+                              }}
+                            >
+                              {item.text}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <div className="search-menu">
+                      <input
+                        className="search-field"
+                        type="text"
+                        placeholder="Unesite tekst..."
+                      ></input>
+                      <div className="v1"></div>
+
+                      <button className="search-button" type="submit">
+                        <GoSearch className="GoSearch-element" size={20} />
+                      </button>
+                    </div>
+                  </nav>
             </div>
-            <Link>
-              <img className="logo-image" id="logo" src={logo}></img>{" "}
-            </Link>
+            
+            <div class="header-link">
+              <Link>
+                <img className="logo-image" id="logo" src={logo}></img>{" "}
+              </Link>
+            </div>
 
             <div className="header-buttons">
               <div className="cart">

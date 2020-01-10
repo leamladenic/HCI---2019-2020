@@ -15,7 +15,7 @@ import logo from "../images/logo_header.png"
 import Header from "./Globals/header"
 
 const Layout = ({ children }) => (
-  <div>
+  <div class="main-container">
     <Header />
     {children}
     <footer className="footer-div">
