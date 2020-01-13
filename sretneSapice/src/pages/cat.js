@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import "../components/shop.css"
+import "../components/shop.min.css"
 import Filter from "../components/animalFilter"
 import AdoptCats from "../components/AdoptCats"
 

@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import Button from "react-bootstrap/Button"
-import "./animalCard.css"
+import "./animalCard.min.css"
 import { Link } from "gatsby"
 import { StaticQuery, graphql } from "gatsby"
 

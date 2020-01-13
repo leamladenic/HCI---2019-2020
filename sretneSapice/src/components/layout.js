@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "./bootstrap.min.css"
-import "./layout.css"
+import "./layout.min.css"
 import logo from "../images/logo_header.png"
 
 import Header from "./Globals/header"

@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import "../components/shop.css"
+import "../components/shop.min.css"
 import Article from "../components/Article"
 import { graphql } from "gatsby"
 

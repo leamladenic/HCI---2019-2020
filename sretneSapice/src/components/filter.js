@@ -1,6 +1,6 @@
 import React, { lazy } from "react"
 import { Link, withAssetPrefix } from "gatsby"
-import "../components/filter.css"
+import "../components/filter.min.css"
 import { getProducts } from "../components/Products"
 import SEO from "../components/seo"
 

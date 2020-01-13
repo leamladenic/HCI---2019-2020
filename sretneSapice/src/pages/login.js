@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import "../components/login.css"
+import "../components/login.min.css"
 import Image from "gatsby-image"
 import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout, handleLogin } from "../services/auth"
@@ -76,7 +76,11 @@ export default class login extends React.Component {
                       onChange={this.handleUpdate}
                     />
                   </label>
-                  <input type="submit" value="Log In" />
+                  <input
+                    className="my-login-button"
+                    type="submit"
+                    value="Log In"
+                  />
                 </form>
               </div>
               <div className="remember-login"></div>

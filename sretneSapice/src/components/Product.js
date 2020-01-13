@@ -1,9 +1,9 @@
 import React from "react"
 import Img from "gatsby-image"
 import Button from "react-bootstrap/Button"
-import "../components/filter.css"
+import "../components/filter.min.css"
 import { Link } from "gatsby"
-import "./productCard.css"
+import "./productCard.min.css"
 
 export default function Product({ product }) {
   console.log(product.animalCategory)

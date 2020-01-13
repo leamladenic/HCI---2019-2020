@@ -41,3 +41,16 @@
   padding: 20px;
   width: 250px;
 }
+.my-login-button {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 23px;
+  padding: 5px 8px;
+  background-color: #fc8f9b;
+  border-radius: 12px;
+}

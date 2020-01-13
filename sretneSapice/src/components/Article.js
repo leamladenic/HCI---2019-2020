@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import Button from "react-bootstrap/Button"
 import { Link } from "gatsby"
-import "./article.css"
+import "./article.min.css"
 
 export default function Article({ product }) {
   return (

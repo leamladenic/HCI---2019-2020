@@ -1,6 +1,6 @@
 import React, { lazy } from "react"
 import "./input.module.css"
-import "../components/filter.css"
+import "../components/filter.min.css"
 
 class Filter extends React.Component {
   render() {
