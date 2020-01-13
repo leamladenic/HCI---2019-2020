@@ -2,7 +2,8 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import "../components/login.css"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
+import { getUser, isLoggedIn, logout, handleLogin } from "../services/auth"
 
 export const big_photo = graphql`
   query {
@@ -16,12 +17,28 @@ export const big_photo = graphql`
   }
 `
 
-export default function login() {
-  return (
-    <StaticQuery
-      query={big_photo}
-      render={data => {
-        return (
+export default class login extends React.Component {
+  state = {
+    username: ``,
+    password: ``,
+  }
+  handleUpdate = event => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
+  }
+  handleSubmit = event => {
+    event.preventDefault()
+    handleLogin(this.state)
+  }
+  render() {
+    if (isLoggedIn()) {
+      navigate(`/`)
+    }
+    return (
+      <StaticQuery
+        query={big_photo}
+        render={data => (
           <div className="login-container">
             <div className="login-image-container">
               <Image
@@ -36,23 +53,30 @@ export default function login() {
               </div>
 
               <div className="login-form">
-                <form>
-                  <div className="login-form-block">
-                    <p className="login-form-text">Korisničko ime:</p>
+                <form
+                  method="post"
+                  onSubmit={event => {
+                    this.handleSubmit(event)
+                    navigate(`/`)
+                  }}
+                >
+                  <label>
+                    Korisničko ime:
                     <input
                       type="text"
-                      name="firstname"
-                      className="input-login"
+                      name="username"
+                      onChange={this.handleUpdate}
                     />
-                  </div>
-                  <div className="login-form-block">
-                    <p className="login-form-text">Zaporka:</p>
+                  </label>
+                  <label>
+                    Lozinka:
                     <input
                       type="password"
                       name="password"
-                      className="input-login"
+                      onChange={this.handleUpdate}
                     />
-                  </div>
+                  </label>
+                  <input type="submit" value="Log In" />
                 </form>
               </div>
               <div className="remember-login"></div>
@@ -60,8 +84,8 @@ export default function login() {
               <div className="login-buttons"></div>
             </div>
           </div>
-        )
-      }}
-    />
-  )
+        )}
+      />
+    )
+  }
 }

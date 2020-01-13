@@ -8,6 +8,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { FaDog, FaCat } from "react-icons/fa"
 import { TiArrowLeftOutline } from "react-icons/ti"
 import Carousel from "../components/carousel.js"
+import { getUser, isLoggedIn, logout } from "../services/auth"
 
 export const query = graphql`
   query {
@@ -44,7 +45,9 @@ const IndexPage = ({ data }) => {
           fluid={data.file.childImageSharp.fluid}
           className="big-hero-photo"
         />
-        <span className="text-over-big-image">Dobro došli!</span>
+        <span className="text-over-big-image">
+          Hello {isLoggedIn() ? getUser().name : ""}!
+        </span>
       </div>
       <div className="big-quote">
         <p className="big-quote-text">Upoznaj me. Spasi me. Usreći me!</p>
