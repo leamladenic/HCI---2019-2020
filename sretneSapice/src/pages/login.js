@@ -54,6 +54,7 @@ export default class login extends React.Component {
 
               <div className="login-form">
                 <form
+                  className="my-login-form"
                   method="post"
                   onSubmit={event => {
                     this.handleSubmit(event)
@@ -76,11 +77,19 @@ export default class login extends React.Component {
                       onChange={this.handleUpdate}
                     />
                   </label>
-                  <input
-                    className="my-login-button"
-                    type="submit"
-                    value="Log In"
-                  />
+                  <div className="div-login-button">
+                    <input
+                      className="my-login-button"
+                      type="submit"
+                      value="Log In"
+                    />
+                  </div>
+
+                  <label class="container">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    Zapamti moju prijavu
+                  </label>
                 </form>
               </div>
               <div className="remember-login"></div>

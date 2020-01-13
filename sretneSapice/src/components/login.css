@@ -28,6 +28,8 @@
   margin-left: 120px;
   margin-right: 120px;
   padding: -30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-login {
@@ -50,7 +52,15 @@
   font-style: normal;
   outline: none;
   font-size: 23px;
-  padding: 5px 8px;
+  padding: 8px 20px;
   background-color: #fc8f9b;
   border-radius: 12px;
+}
+.my-login-form {
+  display: flex;
+  flex-direction: column;
+}
+.div-login-button {
+  display: flex;
+  flex-direction: row;
 }
