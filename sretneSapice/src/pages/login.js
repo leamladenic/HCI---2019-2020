@@ -4,6 +4,8 @@ import "../components/login.min.css"
 import Image from "gatsby-image"
 import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout, handleLogin } from "../services/auth"
+import fb from "../images/fb.png"
+import gmail from "../images/gmail.png"
 
 export const big_photo = graphql`
   query {
@@ -61,40 +63,66 @@ export default class login extends React.Component {
                     navigate(`/`)
                   }}
                 >
-                  <label>
-                    Korisničko ime:
-                    <input
-                      type="text"
-                      name="username"
-                      onChange={this.handleUpdate}
-                    />
-                  </label>
-                  <label>
-                    Lozinka:
-                    <input
-                      type="password"
-                      name="password"
-                      onChange={this.handleUpdate}
-                    />
-                  </label>
+                  <div className="top-form-div">
+                    <label className="login-form-text">
+                      Korisničko ime:
+                      <input
+                        type="text"
+                        name="username"
+                        onChange={this.handleUpdate}
+                        className="login-form-field"
+                      />
+                    </label>
+                    <label className="login-form-text">
+                      Lozinka:
+                      <input
+                        type="password"
+                        name="password"
+                        onChange={this.handleUpdate}
+                        className="login-form-field"
+                      />
+                    </label>
+                    <div className="container-remember">
+                      <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                        Zapamti moju prijavu
+                      </label>
+                    </div>
+                  </div>
                   <div className="div-login-button">
+                    <Link to="/">
+                      <button className="my-login-button-exit">Odustani</button>
+                    </Link>
                     <input
                       className="my-login-button"
                       type="submit"
-                      value="Log In"
+                      value="Prijavi se"
                     />
                   </div>
-
-                  <label class="container">
-                    <input type="checkbox" />
-                    <span class="checkmark"></span>
-                    Zapamti moju prijavu
-                  </label>
                 </form>
               </div>
-              <div className="remember-login"></div>
-              <div className="login-register"></div>
-              <div className="login-buttons"></div>
+
+              <div className="login-register">
+                <p className="p-login">Nemaš račun?</p>
+                <button className="login-register-button">
+                  {" "}
+                  Registriraj se!
+                </button>
+              </div>
+              <div className="out-login-buttons">
+                <button className="login-fb-button">
+                  <img className="fb-image" id="logo" src={fb}></img>
+                  <p className="fb-login-text">
+                    {" "}
+                    Prijavi se putem Facebook računa!
+                  </p>
+                </button>
+                <button className="login-gmail-button">
+                  <img className="gmail-image" id="logo" src={gmail}></img>
+                  Prijavi se putem Google računa!
+                </button>
+              </div>
             </div>
           </div>
         )}

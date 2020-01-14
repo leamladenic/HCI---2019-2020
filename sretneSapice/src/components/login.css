@@ -51,10 +51,30 @@
   font-family: Roboto, sans-serif;
   font-style: normal;
   outline: none;
-  font-size: 23px;
+  font-size: 19px;
   padding: 8px 20px;
   background-color: #fc8f9b;
   border-radius: 12px;
+  margin: 10px;
+}
+.my-login-button-exit {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 19px;
+  padding: 8px 20px;
+  background-color: #7e7e7e;
+  border-radius: 12px;
+  margin: 10px;
+}
+
+.my-login-button-exit,
+.my-login-button:focus {
+  outline: none !important;
 }
 .my-login-form {
   display: flex;
@@ -63,4 +83,105 @@
 .div-login-button {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  padding-bottom: 55px;
+}
+.login-form-text {
+  font-size: 1.5vw;
+  display: flex;
+  flex-direction: column;
+}
+.login-form-field {
+  width: 350px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.login-form-field:focus {
+  width: 450px;
+}
+.container-remember {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.login-register {
+  display: flex;
+  flex-direction: row;
+}
+.login-register-button {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 17px;
+  padding: 7px 65px;
+  background-color: #fc8f9b;
+  border-radius: 12px;
+  margin: 10px;
+}
+.p-login {
+  font-size: 1.3vw;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.fb-image {
+  height: 40px;
+  width: 50px;
+  margin: 0px !important;
+}
+.gmail-image {
+  height: 40px;
+  width: 40px;
+  margin: 0px !important;
+}
+.login-fb-button {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 17px;
+  padding: 5px 60px;
+  background-color: #fc8f9b;
+  border-radius: 12px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.login-fb-button:focus {
+  outline: none !important;
+}
+.login-gmail-button {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 17px;
+  padding: 5px 75px;
+  background-color: #fc8f9b;
+  border-radius: 12px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.login-gmail-button:focus {
+  outline: none !important;
+}
+.fb-login-text {
+  color: white;
+  margin: 0px !important;
+}
+.out-login-buttons {
+  margin-left: 40px;
+  margin-right: 40px;
 }
