@@ -26,9 +26,7 @@ export default function AdoptCat({ product }) {
                 modal: true,
               }}
             >
-              <Button className="btn mt3 btn-animal" variant="outline-success">
-                Upoznaj me!
-              </Button>
+              <button className="btn-animal">Upoznaj me!</button>
             </Link>
           </div>
         </div>

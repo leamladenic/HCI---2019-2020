@@ -36,12 +36,7 @@ export default function Product({ product }) {
                   modal: true,
                 }}
               >
-                <Button
-                  className="btn mt3 btn-product"
-                  variant="outline-success"
-                >
-                  Pogledaj
-                </Button>
+                <button className="btn-product">Pogledaj</button>
               </Link>
             </div>
           </div>

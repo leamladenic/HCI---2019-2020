@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import "../components/shop.min.css"
 import Article from "../components/Article"
@@ -16,7 +16,8 @@ const BlogPage = ({ data }) => {
   let unique_months = [...new Set(months)]
   unique.sort()
   unique_months.sort()
-
+  const [year, setYear] = useState("")
+  // console.log(year)
   let mymonths = []
 
   unique_months.forEach(monthNum => {
@@ -59,7 +60,6 @@ const BlogPage = ({ data }) => {
         break
     }
   })
-
   return (
     <Layout>
       <SEO title="Blog" />
@@ -92,7 +92,7 @@ const BlogPage = ({ data }) => {
                 <p className="year-label">Godina</p>
                 <select
                   className="blog-date-items"
-                  onChange={e => console.log(e.target.value)}
+                  onChange={e => setYear(e.target.value)}
                 >
                   <option value="" disabled selected>
                     Izaberite godinu
@@ -122,8 +122,9 @@ const BlogPage = ({ data }) => {
                 </select>
               </div>
             </label>
-            <button className="cancel">PONIŠTI</button>
-            <button className="search">PRETRAŽI</button>
+            <button className="cancel" onClick={() => setYear("")}>
+              PONIŠTI
+            </button>
           </div>
         </div>
 
@@ -137,7 +138,9 @@ const BlogPage = ({ data }) => {
             <div className="container">
               <div className="row">
                 {data.blog.edges.map(({ node: article }) => {
-                  return <Article key={article.id} product={article} />
+                  return year === "" || year === article.date.substr(6, 4) ? (
+                    <Article key={article.id} product={article} />
+                  ) : null
                 })}
               </div>
             </div>

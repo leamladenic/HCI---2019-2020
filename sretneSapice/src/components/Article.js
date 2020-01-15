@@ -18,16 +18,10 @@ export default function Article({ product }) {
               <h3 className="article-title">{product.title}</h3>
               <p className="article-smalltext">{product.smallText.smallText}</p>
             </div>
-
-            <Link key={product.id} to={`/${product.slug}`} state={product}>
-              <Button
-                className="btn mt3 article-button-mod"
-                variant="outline-success"
-              >
-                Nastavi čitati!
-              </Button>
-            </Link>
           </div>
+          <Link key={product.id} to={`/${product.slug}`} state={product}>
+            <button className="article-button-mod">Nastavi čitati!</button>
+          </Link>
         </div>
       </div>
     </div>
