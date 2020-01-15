@@ -11,7 +11,9 @@
   background-color: #fc8f9b;
   border-radius: 8px;
 }
-
+.btn-product:focus {
+  outline: none !important;
+}
 .buttonProduct {
   display: flex;
   flex-direction: column;

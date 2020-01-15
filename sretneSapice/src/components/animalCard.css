@@ -42,6 +42,9 @@
   background-color: #fc8f9b;
   border-radius: 8px;
 }
+.btn-animal:focus {
+  outline: none !important;
+}
 .product-title {
   font-size: 18px;
   color: #7e7e7e;

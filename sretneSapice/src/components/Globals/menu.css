@@ -32,11 +32,8 @@ nav.show {
   flex-direction: row;
 } */
 
-/* .menu-list {
-  list-style: none;
-  max-height: 50px;
-}
 
+/*
 .menu-list:hover {
   border-bottom: 5px solid #e77f8a;
 } */
@@ -49,7 +46,9 @@ nav.show {
   display: flex;
   margin-top: 8px;
   font-size: 20px;
+  transition: all 0.3s ease-in-out 0s;
 }
+
 .triangle {
   margin-left: 10px;
   margin-top: -40px;

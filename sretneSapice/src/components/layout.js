@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "./bootstrap.min.css"
-import "./layout.min.css"
+import "./layout.css"
 import logo from "../images/logo_header.png"
 
 import Header from "./Globals/header"
@@ -19,55 +19,25 @@ const Layout = ({ children }) => (
     <Header />
     {children}
     <footer className="footer-div">
-      <div
-        className="quote"
-        style={{
-          fontSize: "22px",
-          fontStyle: "italic",
-          paddingTop: "25px",
-          marginBottom: "-15px",
-          fontFamily: "Roboto, sans-serif",
-        }}
-      >
+      <div className="quote">
         "Koliko god da ste siromašni, ukoliko imate psa – vi ste zapravo
         bogati."
       </div>
       <div
         className="author"
         style={{
-          fontSize: "13px",
-          fontStyle: "italic",
-          fontFamily: "Roboto, sans-serif",
-          paddingTop: "15px",
-          marginBottom: "-10px",
+          
         }}
       >
         Louis Sabin
       </div>
       <div
-        className="second-part"
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
+        className="second-part">
         <img
           src={logo}
-          style={{
-            height: "110px",
-            paddingTop: "15px",
-            paddingLeft: "10px",
-          }}
         ></img>
         <div
           className="footer-links"
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            padding: "40px",
-            marginTop: "10px",
-          }}
         >
           <Link to="/about" className="footer-link">
             O nama

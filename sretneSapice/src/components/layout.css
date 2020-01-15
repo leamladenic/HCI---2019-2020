@@ -30,9 +30,64 @@ body {
 
   color: white;
   text-align: center;
-  position: inline;
+  padding: 10px;
 
   margin-top: 5px;
+}
+
+.footer-div .quote {
+  font-size: 22px;
+  font-style: italic;
+  padding: 25px 10px 5px 10px;
+  font-family: Roboto, sans-serif;
+}
+
+.footer-div .author {
+  font-size: 13px;
+  font-style: italic;
+  font-family: Roboto, sans-serif;
+  padding-top: 15px;
+}
+
+.footer-div .second-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-div .second-part img {
+  height: 110px;
+  width: auto;
+  margin: 0;
+}
+
+.footer-div .second-part .footer-links {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.footer-div .second-part .footer-links a {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+@media only screen and (max-width: 850px) {
+  .footer-div .second-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-div .second-part img {
+    height: auto;
+    width: 310px;
+    margin: 40px auto 10px;
+  }
+  .footer-div .second-part .footer-links {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0 0 0;
+    justify-content: center;
+  }
 }
 
 article,

@@ -32,7 +32,7 @@ export const myProducts = graphql`
 export default function Carousel() {
   const [activeItemIndex, setActiveItemIndex] = useState(0)
   const chevronWidth = 40
-  var numberCard = 4
+
   return (
     <StaticQuery
       query={myProducts}

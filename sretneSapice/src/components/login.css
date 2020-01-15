@@ -28,8 +28,6 @@
   margin-left: 120px;
   margin-right: 120px;
   padding: -30px;
-  display: flex;
-  flex-direction: column;
 }
 
 .input-login {
@@ -43,6 +41,7 @@
   padding: 20px;
   width: 250px;
 }
+
 .my-login-button {
   border: none;
   color: white;

@@ -164,30 +164,17 @@ export default class Header extends Component {
                 </button>
               </div>
               <div id="login">
-                {isLoggedIn() ? (
+                <Link to="/login/">
                   <button
                     className="login-button"
-                    href="/"
-                    onClick={event => {
-                      event.preventDefault()
-                      logout(() => navigate(`/`))
+                    type="button"
+                    focus={{
+                      outline: "none !important",
                     }}
                   >
-                    ODJAVA
+                    PRIJAVA
                   </button>
-                ) : (
-                  <Link to="/login/">
-                    <button
-                      className="login-button"
-                      type="button"
-                      focus={{
-                        outline: "none !important",
-                      }}
-                    >
-                      PRIJAVA
-                    </button>
-                  </Link>
-                )}
+                </Link>
               </div>
             </div>
           </header>

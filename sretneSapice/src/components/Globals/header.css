@@ -56,6 +56,11 @@
   font-style: normal;
   font-size: 16px;
   outline: none;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.login-button:hover {
+  background-color: #ffb5b5;
 }
 
 .login-button:focus {
@@ -136,12 +141,14 @@ nav.show {
 .menu-list {
   list-style: none;
   max-height: 50px;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .menu-list a {
   padding: 0;
   font-size: 1em;
   margin: 0;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .menu-list:hover {

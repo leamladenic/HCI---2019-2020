@@ -56,3 +56,6 @@
   background-color: #fc8f9b;
   border-radius: 8px;
 }
+.article-button-mod:focus {
+  outline: none !important;
+}
