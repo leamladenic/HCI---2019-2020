@@ -53,30 +53,30 @@ class Filter extends React.Component {
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              Hrana
+               Hrana
             </label>
 
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              Igračke
+               Igračke
             </label>
 
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              Sredstva za dlaku
+               Sredstva za dlaku
             </label>
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              Povodci
+               Povodci
             </label>
 
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              Modni dodaci
+               Modni dodaci
             </label>
           </div>
           <p className="filter-category-name-shop">Cijena</p>
@@ -84,25 +84,25 @@ class Filter extends React.Component {
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              &lt; 30 kn
+               &lt; 30 kn
             </label>
 
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              30 - 50 kn
+               30 - 50 kn
             </label>
 
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              50 - 100 kn
+               50 - 100 kn
             </label>
 
             <label class="container">
               <input type="checkbox" />
               <span class="checkmark"></span>
-              100 - 150 kn
+               100 - 150 kn
             </label>
             <label class="container">
               <input type="checkbox" />
@@ -135,8 +135,10 @@ class Filter extends React.Component {
               Senior
             </label>
           </div>
-          <button className="cancel">PONIŠTI</button>
-          <button className="search">PRETRAŽI</button>
+          <div className="animal-filter-buttons">
+            <button className="cancel">PONIŠTI</button>
+            <button className="search">PRETRAŽI</button>
+          </div>
         </div>
       </div>
     )

@@ -39,7 +39,7 @@ export default function Carousel() {
       render={data => {
         return (
           <div className="main-carousel" style={{ padding: `50px` }}>
-            <Media queries={{ small: { maxWidth: 700 } }}>
+            <Media queries={{ small: { maxWidth: 800 } }}>
               {matches =>
                 matches.small ? (
                   <ItemsCarousel

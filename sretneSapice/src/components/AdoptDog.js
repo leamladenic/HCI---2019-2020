@@ -9,11 +9,11 @@ export default function AdoptDog({ product }) {
   let age = product.age
 
   return (
-    <div className="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto my-3">
+    <div className="container-column">
       <div className="card">
         <Img fluid={product.image.fluid} className="card-img-top" />
-        <div className="card-body ">
-          <div className="card-text">
+        <div className="card-body card-body-animal">
+          <div className="card-text card-text-animal">
             <div className="priceButton">
               <h3 className="animal-name">{product.name}</h3>
               <p className="animal-age">{age}</p>
@@ -25,6 +25,8 @@ export default function AdoptDog({ product }) {
               state={{
                 modal: true,
               }}
+              style={{margin: `5px auto` }}
+              className="animal-store-button"
             >
               <button className="btn-animal">Upoznaj me!</button>
             </Link>

@@ -10,7 +10,7 @@ export default function Article({ product }) {
       <div className="card-article">
         <Img
           fluid={product.image.fluid}
-          className="card-img card-image-article"
+          className="card-image-article" style={{width: `100%`}}
         />
         <div className="card-body text-left card-text-article">
           <div className="card-text text-article">
@@ -19,7 +19,7 @@ export default function Article({ product }) {
               <p className="article-smalltext">{product.smallText.smallText}</p>
             </div>
           </div>
-          <Link key={product.id} to={`/${product.slug}`} state={product}>
+          <Link className="article-button-link" key={product.id} to={`/${product.slug}`} state={product}>
             <button className="article-button-mod">Nastavi čitati!</button>
           </Link>
         </div>

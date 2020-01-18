@@ -30,9 +30,9 @@ export default function Products() {
       query={getProducts}
       render={data => {
         return (
-          <section className="py-5">
-            <div className="container">
-              <div className="row">
+          <section className="main-container-animal">
+            <div className="container-padding">
+              <div className="container-row">
                 {data.products.edges.map(({ node: product }) => {
                   return <Product key={product.id} product={product} />
                 })}

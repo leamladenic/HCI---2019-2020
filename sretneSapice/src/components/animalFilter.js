@@ -40,7 +40,7 @@ class Filter extends React.Component {
                   &gt; 10 godina
                 </label>
               </div>
-              <label className="filter-label">
+              <div className="filter-label">
                 <p className="filter-category-name">Veličina</p>
 
                 <label class="container">
@@ -59,8 +59,8 @@ class Filter extends React.Component {
                   <span class="checkmark"></span>
                   &gt; 50 cm
                 </label>
-              </label>
-              <label className="filter-label">
+              </div>
+              <div className="filter-label">
                 <p className="filter-category-name">Spol</p>
                 <label class="container">
                   <input type="checkbox" />
@@ -72,8 +72,8 @@ class Filter extends React.Component {
                   <span class="checkmark"></span>
                   Ženka
                 </label>
-              </label>
-              <label className="filter-label">
+              </div>
+              <div className="filter-label">
                 <p className="filter-category-name">Pasmina</p>
                 <label class="container">
                   <input type="checkbox" />
@@ -85,12 +85,13 @@ class Filter extends React.Component {
                   <span class="checkmark"></span>
                   Mješanci
                 </label>
-              </label>
+              </div>
             </div>
           </div>
-
-          <button className="cancel">PONIŠTI</button>
-          <button className="search">PRETRAŽI</button>
+          <div className="animal-filter-buttons">
+            <button className="cancel">PONIŠTI</button>
+            <button className="search">PRETRAŽI</button>
+          </div>
         </div>
       </div>
     )

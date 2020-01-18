@@ -23,22 +23,15 @@ const Layout = ({ children }) => (
         "Koliko god da ste siromašni, ukoliko imate psa – vi ste zapravo
         bogati."
       </div>
-      <div
-        className="author"
-        style={{
-          
-        }}
-      >
+      <div className="author" style={{}}>
         Louis Sabin
       </div>
-      <div
-        className="second-part">
-        <img
-          src={logo}
-        ></img>
-        <div
-          className="footer-links"
-        >
+      <div className="second-part">
+        <img src={logo}></img>
+        <div className="login-div-footer">
+          <button className="login-button-footer">Prijavi se!</button>
+        </div>
+        <div className="footer-links">
           <Link to="/about" className="footer-link">
             O nama
           </Link>

@@ -26,13 +26,13 @@ export default ({ data }) => {
   return (
     <ModalRoutingContext.Consumer>
       {({ modal, closeTo }) => (
-        <div className="modalWindowContainer">
+        <div className="modalWindowContainer" style={{overflow: "hidden", height: "100%"}}>
           <div className="popContainer">
             <div className="popImage">
               <Image fluid={post.image.fluid} className="popImageItem" />
             </div>
             <div className="popInfo">
-              <div>
+              <div className="x-button">
                 {modal ? (
                   <Link to={closeTo}>
                     <div className="close-link">

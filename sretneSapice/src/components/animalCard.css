@@ -6,12 +6,22 @@
   max-height: 301px;
 }
 .card-body {
-  max-height: 120px;
+  min-height: 20vw;
+  display: flex;
+  flex-direction: column;
+  width:70%;
+}
+
+.card-body-animal {
+  max-height: 50vw!important;
+  min-height: unset!important;
+  width: 100%;
 }
 .card-text {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 80%;
 }
 .priceButton {
   display: flex;
@@ -48,4 +58,77 @@
 .product-title {
   font-size: 18px;
   color: #7e7e7e;
+  margin: 0 0 5px 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .card-body {
+    
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .card-body {
+    
+    width:100%;
+  }
+}
+
+
+.card-text-animal {
+  display: flex;
+  flex-direction: column;
+}
+
+.animal-store-button button {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.animal-store-button button:hover {
+  background-color: #ffb5b5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 830px) {
+  .infoDetailVet {
+    height: unset;
+  }
+
+  .infoDetail {
+      display: flex;
+      margin: 0;
+      height: 8%;
+  }
+
+  .infoDetailVet {
+    height: 50%;
+  }
+
+  .infoDetailVet h3 {
+        margin: 0;
+  }
+
+  .infoDetail h3, .infoDetail p {
+    font-size: 13px;
+  }
+
+  .infoDetail h3 {
+    margin-top:2px;
+  }
+
+
+  .popButtons .cancelpop, .popButtons .searchpop {
+    padding: 0px 0;
+  }
 }

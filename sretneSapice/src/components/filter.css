@@ -1,6 +1,7 @@
 .filter-buttons {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 .dog-shop,
 .cat-shop {
@@ -34,8 +35,9 @@
   outline: none;
   font-size: 18px;
   padding: 10px 32px;
-  margin-bottom: 20px;
+  margin: 0;
 }
+
 .cat-shop-active,
 .dog-shop-active:focus {
   outline: none !important;
@@ -51,33 +53,21 @@
 }
 
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  display: flex;
+  flex-direction: row;
   cursor: pointer;
-  font-size: 18px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+  display: none;
 }
 
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 25px;
   width: 25px;
   background-color: #eee;
+  transition: all 0.3s ease-in-out 0s;
+  margin-right: 10px;
 }
 
 .container:hover input ~ .checkmark {
@@ -99,15 +89,13 @@
 }
 
 .container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
+  width: 10px;
+  height: 16px;
+  border: solid #fff;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+  margin: 2px 8px;
 }
 .cancel,
 .search {
@@ -120,18 +108,28 @@
   outline: none;
   font-size: 18px;
   padding: 5px 8px;
-  margin-bottom: 20px;
   border-radius: 8px;
-  margin-top: 10px;
+  margin: 10px 5px!important;
 }
 
 .cancel {
   background-color: #7e7e7e;
-  margin-left: 70px;
+  margin-left: 20px;
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+.cancel:hover {
+  background-color: #525252;
 }
 .search {
   background-color: #fc8f9b;
   margin-left: 15px;
+  -webkit-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+
+.search:hover {
+  background-color: #ffb5b5;
 }
 
 .cancel,
@@ -141,7 +139,6 @@
 
 .filter-category-name {
   font-size: 18px;
-  margin-left: -15px;
   margin-bottom: 10px;
 }
 
@@ -157,4 +154,73 @@
 }
 .cat .dog {
   display: hidden;
+}
+
+@media screen and (max-width: 830px) {
+  .animalFilters {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .animalFilters div {
+    width:50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .animalFilters {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: unset;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .animalFilters div {
+    width:100%;
+  }
+}
+
+
+.animal-filter-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .animal-filter-buttons button {
+    font-size: .7em;
+    margin: 10px 2px 10px 2px;
+  }
+  .animalFilters {
+    font-size: .8em;
+  }
+
+  .cat-shop-active,
+  .dog-shop-active {
+    padding: 2px 14px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .cat-shop-active,
+  .dog-shop-active {
+    padding: 2px 10px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .animal-filter-buttons button {
+    font-size: 1em;
+  }
+  .animalFilters {
+    font-size: 1em;
+  }
+  .cat-shop-active,
+  .dog-shop-active {
+    padding: 10px 32px;
+  }
+  
 }

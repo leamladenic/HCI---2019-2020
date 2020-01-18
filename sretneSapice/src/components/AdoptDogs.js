@@ -31,9 +31,9 @@ export default function AdoptDogs() {
       query={getProducts}
       render={data => {
         return (
-          <section className="py-5">
-            <div className="container">
-              <div className="row">
+          <section className="main-container-animal">
+            <div className="container-padding">
+              <div className="container-row">
                 {data.dogs.edges.map(({ node: dog }) => {
                   return <AdoptCat key={dog.id} product={dog} />
                 })}

@@ -9,8 +9,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.login-button-footer {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 19px;
+  padding: 8px 25px;
+  background-color: #fc8f9b;
+  border-radius: 12px;
+  margin: 45px;
+}
+
+.login-button-footer:hover {
+  background-color: #ffb5b5;
+}
+
 .main-container {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .footer-link {
@@ -31,8 +50,6 @@ body {
   color: white;
   text-align: center;
   padding: 10px;
-
-  margin-top: 5px;
 }
 
 .footer-div .quote {

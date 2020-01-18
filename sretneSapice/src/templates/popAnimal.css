@@ -9,25 +9,31 @@
 
 .popContainer {
   display: flex;
-  flex-direction: row;
-  height: 85vh;
+  height: 100%;
 }
 .popImageItem {
   width: 100%;
   height: 102%;
 }
 .popImage {
-  width: 50%;
+  width: 40%;
 }
 .popInfo {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
+
+.x-button {
+  height: 10%;
+}
+
 .popInfoDetails {
-  margin: 25px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
+  height: 90%;
 }
 .info-text {
   font-size: 23px;
@@ -37,21 +43,36 @@
 }
 .infoDetail {
   display: flex;
-  margin: -8px;
+  margin: 0;
+  height: 10%;
 }
 .infoDetailVet {
   display: flex;
   flex-direction: column;
   margin: -8px;
+  height: 20%;
+  padding-left: 10px;
+}
+.infoDetailVet .info-text {
+  font-size: 22px;
+}
+
+.infoDetailVet .info-text p {
+  margin: -12px;
 }
 
 .popButtons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 20px;
-  margin-top: 50px;
+  height: 20%;
+  padding: 2vw 0;
 }
+
+.popButtons a {
+  width: 48%;
+}
+
 .cancelpop,
 .searchpop {
   border: none;
@@ -62,16 +83,17 @@
   font-style: normal;
   outline: none;
   font-size: 25px;
-
-  margin-bottom: 20px;
+  border-radius: 12px;
 }
 .cancelpop {
   background-color: #7e7e7e;
-  padding: 10px 85px;
+  width: 100%;
+  padding: 10px 0;
 }
 .searchpop {
   background-color: #fc8f9b;
-  padding: 10px 100px;
+  width: 100%;
+  padding: 10px 0;
 }
 
 .cancelpop,
@@ -95,8 +117,8 @@
 .infoDivPrice {
   display: flex;
   flex-direction: column;
-  padding-bottom: 90px;
-  padding-top: 90px;
+  height: 40%;
+  padding: 5vw 0;
 }
 .pdvDiv {
   font-size: 20px;
@@ -108,4 +130,61 @@
   justify-content: first baseline;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+}
+
+@media screen and (max-width: 830px) {
+  .popContainer {
+    flex-direction: column;
+  }
+  .popImage {
+    width: 100%;
+    height: 30%;
+    margin-top: 5%;
+  }
+  .popInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .x-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .popInfoDetails {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+  }
+  .infoDivPrice {
+    padding: 2vw 10px;
+  }
+
+  .infoDetail h3,
+  .infoDetail p {
+    font-size: 15px;
+  }
+  .infoDivPrice .infoDetailPrice h1 {
+    font-size: 22px;
+  }
+
+  .infoDivPrice .infoDetailPrice p {
+    font-size: 22px;
+    padding: 8px 20px;
+  }
+
+  .infoDivPrice .pdvContainer p {
+    font-size: 14px;
+  }
+  .popButtons {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
 }

@@ -24,8 +24,7 @@ const AboutPage = ({ data }) => (
 
     <div
       style={{
-        marginLeft: "130px",
-        marginRight: "130px",
+        margin: "auto 10%"
       }}
     >
       <h1

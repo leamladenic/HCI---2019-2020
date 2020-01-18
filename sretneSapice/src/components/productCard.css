@@ -15,12 +15,29 @@
   outline: none !important;
 }
 .buttonProduct {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 10px;
+  margin: auto 2px;
 }
 .priceProduct {
   display: flex;
   flex-direction: column;
+}
+
+
+.filter-space {
+  font-size: 1rem;
+}
+
+
+
+
+@media screen and (max-width: 1100px) {
+  .filter-space {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .filter-space {
+    font-size: 1rem;
+  }
 }
