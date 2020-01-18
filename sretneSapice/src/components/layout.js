@@ -29,7 +29,9 @@ const Layout = ({ children }) => (
       <div className="second-part">
         <img src={logo}></img>
         <div className="login-div-footer">
-          <button className="login-button-footer">Prijavi se!</button>
+          <Link to="/login">
+            <button className="login-button-footer">Prijavi se!</button>
+          </Link>
         </div>
         <div className="footer-links">
           <Link to="/about" className="footer-link">

@@ -28,6 +28,10 @@ body {
   background-color: #ffb5b5;
 }
 
+.login-button-footer:focus {
+  outline: none !important;
+}
+
 .main-container {
   overflow: hidden;
 }
