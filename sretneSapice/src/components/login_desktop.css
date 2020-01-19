@@ -1,11 +1,7 @@
 .login-container {
   display: flex;
-  width: 100%;
 }
-.login-image {
-  width: 110vh;
-  height: 100vh;
-}
+
 .login-form-container {
   display: flex;
   flex-direction: column;
@@ -26,9 +22,7 @@
 }
 
 .login-form {
-  margin-left: 120px;
-  margin-right: 120px;
-  padding: -30px;
+  margin: 0.8vh auto;
 }
 
 .input-login {
@@ -80,12 +74,12 @@
   display: flex;
   flex-direction: column;
 }
-.div-login-button {
+.div-login-button-desktop {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   width: 100%;
-  padding-bottom: 55px;
+  padding-bottom: 40px;
 }
 .login-form-text {
   font-size: 1.5vw;
@@ -127,17 +121,17 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.fb-image {
-  height: 40px;
-  width: 50px;
-  margin: 0px !important;
+.fb-image-desktop {
+  height: 5vh;
+  width: 6.5vh;
+  margin: 3px !important;
 }
-.gmail-image {
-  height: 40px;
-  width: 40px;
-  margin: 0px !important;
+.gmail-image-desktop {
+  height: 5.5vh;
+  width: 5.5vh;
+  margin: 3px !important;
 }
-.login-fb-button {
+.login-fb-button-desktop {
   border: none;
   color: white;
   text-align: center;
@@ -146,10 +140,10 @@
   font-style: normal;
   outline: none;
   font-size: 17px;
-  padding: 5px 60px;
+  padding: 7px 60px;
   background-color: #fc8f9b;
   border-radius: 12px;
-  margin: 10px;
+  margin: 10px auto 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -157,7 +151,7 @@
 .login-fb-button:focus {
   outline: none !important;
 }
-.login-gmail-button {
+.login-gmail-button-desktop {
   border: none;
   color: white;
   text-align: center;
@@ -169,7 +163,7 @@
   padding: 5px 75px;
   background-color: #fc8f9b;
   border-radius: 12px;
-  margin: 10px;
+  margin: 10px auto 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -177,11 +171,33 @@
 .login-gmail-button:focus {
   outline: none !important;
 }
-.fb-login-text {
+.fb-login-text-desktop {
   color: white;
-  margin: 0px !important;
+  margin: 8px !important;
 }
 .out-login-buttons {
   margin-left: 40px;
   margin-right: 40px;
+}
+
+.login-background-desktop,
+.login-form-container {
+  width: 100%;
+}
+
+.login-background-desktop {
+  background: url("../images/login.jpg");
+  background-size: cover;
+  height: 100%;
+}
+
+.login-background-overlay-desktop {
+  background: rgba(255, 143, 190, 0.5);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-image-desktop {
+  margin: 66vh auto 0;
 }

@@ -1,11 +1,3 @@
-.login-container {
-  display: flex;
-  width: 100%;
-}
-.login-image {
-  width: 110vh;
-  height: 100vh;
-}
 .login-form-container {
   display: flex;
   flex-direction: column;
@@ -92,12 +84,12 @@
   display: flex;
   flex-direction: column;
 }
-.login-form-field {
+.login-form-field-mobile {
   width: 350px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
-.login-form-field:focus {
+.login-form-field-mobile:focus {
   width: 450px;
 }
 .container-remember {
@@ -137,7 +129,7 @@
   width: 40px;
   margin: 0px !important;
 }
-.login-fb-button {
+.login-fb-button-mobile {
   border: none;
   color: white;
   text-align: center;
@@ -157,7 +149,7 @@
 .login-fb-button:focus {
   outline: none !important;
 }
-.login-gmail-button {
+.login-gmail-button-mobile {
   border: none;
   color: white;
   text-align: center;
@@ -184,4 +176,62 @@
 .out-login-buttons {
   margin-left: 40px;
   margin-right: 40px;
+}
+.login-background-mobile {
+  width: 100%;
+  height: 110vh;
+}
+
+.login-background-mobile {
+  background: url("../images/login_hero.jpg");
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+}
+
+.login-background-overlay-mobile {
+  background: rgba(255, 143, 190, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.login-background-overlay-mobile-white {
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.first-buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh auto;
+  margin-top: 20vh;
+}
+
+.logo-image-mobile {
+  height: 15vh;
+}
+.login-container-mobile {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.first-button {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 24px;
+  padding: 8px 20px;
+  background-color: #fc8f9b;
+  border-radius: 12px;
+  margin: 15px;
 }
