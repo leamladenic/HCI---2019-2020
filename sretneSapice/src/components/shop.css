@@ -1,5 +1,5 @@
 .main-div {
-  background:#f2f2f2;
+  background: #f2f2f2;
 }
 
 .main-div-container {
@@ -39,7 +39,6 @@
   width: 80%;
 }
 
-
 .main-container-animal {
   margin-left: 20px;
 }
@@ -70,7 +69,7 @@
 
 @media screen and (max-width: 1250px) {
   .navigation-mark h1 {
-    font-size: 2em!important;
+    font-size: 2em !important;
   }
 }
 
@@ -79,7 +78,7 @@
     width: 45%;
   }
   .navigation-mark h1 {
-    font-size: 1.8em!important;
+    font-size: 1.8em !important;
   }
 }
 
@@ -104,10 +103,8 @@
 }
 
 .left-div-container {
-  box-shadow: 0 0 5px rgba(0,0,0,.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .filter {
   background-color: white;
@@ -118,4 +115,27 @@ p {
 }
 .cat .dog {
   display: hidden;
+}
+.cancel-blog {
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  outline: none;
+  font-size: 18px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  margin: 10px 170px !important;
+  background-color: #7e7e7e;
+  margin-left: 20vh;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.cancel-blog:hover {
+  background-color: #525252;
+}
+.cancel-blog:focus {
+  outline: none !important;
 }

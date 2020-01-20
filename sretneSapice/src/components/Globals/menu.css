@@ -32,7 +32,6 @@ nav.show {
   flex-direction: row;
 } */
 
-
 /*
 .menu-list:hover {
   border-bottom: 5px solid #e77f8a;
@@ -112,4 +111,30 @@ a:hover {
 
 .GoSearch-element {
   margin-left: -20px;
+}
+
+.menu-button {
+  height: 80px;
+  margin-left: -25px;
+  background-color: #e77f8a;
+  border: none;
+  color: white;
+  padding: 22px 32px;
+
+  outline: none;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+@media only screen and (max-width: 650px) {
+  .menu-button {
+    height: 80px;
+    margin-left: -25px;
+    background-color: #e77f8a;
+    border: none;
+    color: white;
+    padding: 22px 32px;
+    margin-top: -9px;
+    outline: none;
+    transition: all 0.3s ease-in-out 0s;
+  }
 }

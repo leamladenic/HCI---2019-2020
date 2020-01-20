@@ -68,10 +68,7 @@ const BlogPage = ({ data }) => {
           <div className="left-div">
             <div class="left-div-container">
               <div className="navigation-mark">
-                <h1
-                >
-                  Blog
-                </h1>
+                <h1>Blog</h1>
               </div>
               <div className="filter">
                 <p
@@ -119,28 +116,26 @@ const BlogPage = ({ data }) => {
                     </select>
                   </div>
                 </label>
-                <button className="cancel" onClick={() => setYear("")}>
+                <button className="cancel-blog" onClick={() => setYear("")}>
                   PONIŠTI
                 </button>
               </div>
             </div>
-        </div>
+          </div>
 
-        <div
-          className="right-div"
-        >
-          <section>
-            <div className="custom-container">
-              <div className="container-row">
-                {data.blog.edges.map(({ node: article }) => {
-                  return year === "" || year === article.date.substr(6, 4) ? (
-                    <Article key={article.id} product={article} />
-                  ) : null
-                })}
+          <div className="right-div">
+            <section>
+              <div className="custom-container">
+                <div className="container-row">
+                  {data.blog.edges.map(({ node: article }) => {
+                    return year === "" || year === article.date.substr(6, 4) ? (
+                      <Article key={article.id} product={article} />
+                    ) : null
+                  })}
+                </div>
               </div>
-            </div>
-          </section>
-        </div>
+            </section>
+          </div>
         </div>
       </div>
     </Layout>
