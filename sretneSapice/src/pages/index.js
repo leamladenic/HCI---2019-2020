@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import Image from "gatsby-image"
+
 import Layout from "../components/layout"
 import "../components/index.min.css"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { FaDog, FaCat } from "react-icons/fa"
 import { TiArrowLeftOutline } from "react-icons/ti"
 import Carousel from "../components/carousel.js"

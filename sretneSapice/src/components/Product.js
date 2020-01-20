@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import Button from "react-bootstrap/Button"
+
 import "../components/filter.min.css"
 import { Link } from "gatsby"
 import "./productCard.min.css"

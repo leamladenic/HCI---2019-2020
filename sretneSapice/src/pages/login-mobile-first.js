@@ -1,8 +1,6 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+
 import logo from "../images/logo_header.png"
-import Image from "gatsby-image"
-import { Link, navigate } from "gatsby"
 
 import "../components/login_mobile.css"
 

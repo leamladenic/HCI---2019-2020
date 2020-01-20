@@ -5,7 +5,7 @@ import Link from "gatsby"
 import Layout from "../components/layout"
 import "../components/shop.min.css"
 import Filter from "../components/filter"
-import { useStaticQuery, graphql } from "gatsby"
+
 import SEO from "../components/seo"
 import Products from "../components/Products"
 

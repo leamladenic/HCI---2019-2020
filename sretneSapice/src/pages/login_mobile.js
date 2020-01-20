@@ -1,12 +1,12 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+
 import { FaFacebookSquare, FaEnvelope } from "react-icons/fa"
-import Image from "gatsby-image"
+
 import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout, handleLogin } from "../services/auth"
 
 import logo from "../images/logo.png"
-import "../components/login_mobile.css"
+import "../components/login_mobile.min.css"
 
 export default class LoginMobile extends React.Component {
   state = {

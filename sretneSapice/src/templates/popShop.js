@@ -6,7 +6,6 @@ import { MdClose } from "react-icons/md"
 import "./popAnimal.min.css"
 import Image from "gatsby-image"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export default ({ data }) => {
   const post = data.contentfulMyProducts
@@ -14,19 +13,13 @@ export default ({ data }) => {
   const Bold = ({ children }) => <span className="bold">{children}</span>
   const Text = ({ children }) => <p className="align-center">{children}</p>
 
-  const options = {
-    renderMark: {
-      [MARKS.BOLD]: text => <Bold>{text}</Bold>,
-    },
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: (data, children) => <Text>{children}</Text>,
-    },
-  }
-
   return (
     <ModalRoutingContext.Consumer>
       {({ modal, closeTo }) => (
-        <div className="modalWindowContainer" style={{overflow: "hidden", height: "100%"}}>
+        <div
+          className="modalWindowContainer"
+          style={{ overflow: "hidden", height: "100%" }}
+        >
           <div className="popContainer">
             <div className="popImage">
               <Image fluid={post.image.fluid} className="popImageItem" />

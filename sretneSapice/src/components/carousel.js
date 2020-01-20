@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from "gatsby"
 import ItemsCarousel from "react-items-carousel"
-import React, { Component, useState } from "react"
+import React, { useState } from "react"
 import "../components/index.min.css"
 import { Link } from "gatsby"
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io"

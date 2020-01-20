@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import "../components/login_desktop.css"
-import Image from "gatsby-image"
+
 import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout, handleLogin } from "../services/auth"
 import fb from "../images/fb.png"
