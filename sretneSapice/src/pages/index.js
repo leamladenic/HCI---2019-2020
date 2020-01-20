@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
       <div className="big-hero-photo-div">
         <div class="big-hero-image">
           <span className="text-over-big-image">
-            Hello {isLoggedIn() ? getUser().name : ""}!
+            {isLoggedIn() ? "Dobar dan, " + getUser().name + "!" : ""}
           </span>
         </div>
         {/* <Image
