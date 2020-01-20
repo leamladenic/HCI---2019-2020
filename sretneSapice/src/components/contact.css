@@ -5,7 +5,8 @@
   margin: auto 10%;
   padding: 20px 0;
 }
-.contact-form, .contact-map {
+.contact-form,
+.contact-map {
   width: 50%;
   padding: 20px;
 }
@@ -75,15 +76,24 @@
   margin-bottom: 20px;
   width: 100px;
   margin-top: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .submit-contact-button {
+  background-color: #fc8f9b;
+  margin-left: 15px;
+}
+.reset-contact-number {
   background-color: #7e7e7e;
   margin-left: 70px;
 }
-.reset-contact-number {
-  background-color: #fc8f9b;
-  margin-left: 15px;
+
+.submit-contact-button:hover {
+  background-color: #ffb5b5;
+}
+.reset-contact-number:hover {
+  background-color: #525252;
 }
 
 .submit-contact-button,
@@ -125,30 +135,32 @@
   color: #e77f8a;
 }
 
-
 @media only screen and (max-width: 830px) {
   .contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .contact-form, .contact-map {
+  .contact-form,
+  .contact-map {
     width: 100%;
     padding: 20px;
   }
-  .form-item-contact input, .form-item-contact textarea {
-    width: 100%!important;
+  .form-item-contact input,
+  .form-item-contact textarea {
+    width: 100% !important;
   }
   #message:focus {
-    width: unset!important;
-  } 
+    width: unset !important;
+  }
   .buttons-form-contact {
     margin: auto 40px;
     display: flex;
     justify-content: space-evenly;
     padding: 30px 0;
   }
-  .buttons-form-contact button, .buttons-form-contact input {
+  .buttons-form-contact button,
+  .buttons-form-contact input {
     margin: 0;
   }
 }

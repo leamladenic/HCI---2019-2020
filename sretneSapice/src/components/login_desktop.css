@@ -48,9 +48,14 @@
   font-size: 19px;
   padding: 8px 20px;
   background-color: #fc8f9b;
-  border-radius: 12px;
+  border-radius: 8px;
   margin: 10px;
+  transition: all 0.3s ease-in-out 0s;
 }
+.my-login-button:hover {
+  background-color: #ffb5b5;
+}
+
 .my-login-button-exit {
   border: none;
   color: white;
@@ -62,8 +67,12 @@
   font-size: 19px;
   padding: 8px 20px;
   background-color: #7e7e7e;
-  border-radius: 12px;
+  border-radius: 8px;
   margin: 10px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.my-login-button-exit:hover {
+  background-color: #525252;
 }
 
 .my-login-button-exit,
@@ -113,8 +122,12 @@
   font-size: 17px;
   padding: 7px 65px;
   background-color: #fc8f9b;
-  border-radius: 12px;
+  border-radius: 8px;
   margin: 10px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.login-register-button:hover {
+  background-color: #ffb5b5;
 }
 .p-login {
   font-size: 1.3vw;
@@ -142,11 +155,15 @@
   font-size: 17px;
   padding: 7px 60px;
   background-color: #fc8f9b;
-  border-radius: 12px;
+  border-radius: 8px;
   margin: 10px auto 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  transition: all 0.3s ease-in-out 0s;
+}
+.login-fb-button-desktop:hover {
+  background-color: #ffb5b5;
 }
 .login-fb-button:focus {
   outline: none !important;
@@ -162,14 +179,18 @@
   font-size: 17px;
   padding: 5px 75px;
   background-color: #fc8f9b;
-  border-radius: 12px;
+  border-radius: 8px;
   margin: 10px auto 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  transition: all 0.3s ease-in-out 0s;
 }
 .login-gmail-button:focus {
   outline: none !important;
+}
+.login-gmail-button:hover {
+  background-color: #ffb5b5;
 }
 .fb-login-text-desktop {
   color: white;
