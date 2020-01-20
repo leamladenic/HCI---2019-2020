@@ -16,13 +16,6 @@ export const query = graphql`
         }
       }
     }
-    map: file(relativePath: { eq: "location.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 900) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `
 
@@ -76,10 +69,16 @@ const ContactPage = ({ data }) => (
       </div>
       <div className="contact-map">
         <div className="contact-img-div">
-          <Image
-            className="contact-img"
-            fluid={data.map.childImageSharp.fluid}
-          />
+          <iframe
+            style={{ width: "100%", margin: "0 0 -10px 0", height: "400px" }}
+            className="google-maps"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=Kozja%C4%8Dka%20ul.%2016%2C%20Solin&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
         </div>
         <div className="info-contact">
           <div style={{ display: "flex" }}>
