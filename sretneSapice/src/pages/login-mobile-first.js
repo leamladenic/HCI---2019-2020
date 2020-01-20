@@ -10,20 +10,30 @@ export default class LoginMobileFirst extends React.Component {
   render() {
     return (
       <div>
-        <div class="login-container-mobile">
-          <div class="login-background-mobile">
-            <div class="login-background-overlay-mobile">
-              <img class="logo-image-mobile" src={logo} alt="logo" />
-              <div className="first-buttons">
-                <Link to="/login_mobile">
-                  <button className="first-button">Prijavi se!</button>
-                </Link>
-                <button className="first-button">Registriraj se!</button>
-                <Link to="/">
-                  <button className="first-button">Odustani</button>
-                </Link>
+        <div class="login-inactive-container">
+          <div class="login-inactive-background">
+            <div class="login-inactive-background-overlay">
+              <div class="login-inactive-elements">
+                <img class="login-inactive-logo-image" src={logo} alt="logo" />
+                <div class="login-inactive-buttons">
+                  <a
+                    href="/login_mobile"
+                    class="login-inactive-button-transparent"
+                  >
+                    Prijavi se!
+                  </a>
+                  <a href="/" class="login-inactive-button-full">
+                    Registriraj se!
+                  </a>
+                  <a
+                    href="/"
+                    class="login-inactive-button-full login-inactive-button-full-grey"
+                  >
+                    Odustani
+                  </a>
+                </div>
               </div>
-            </div>{" "}
+            </div>
           </div>
         </div>
       </div>

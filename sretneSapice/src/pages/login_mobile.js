@@ -1,25 +1,12 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import logo from "../images/logo_header.png"
+import { FaFacebookSquare, FaEnvelope } from "react-icons/fa"
 import Image from "gatsby-image"
 import { Link, navigate } from "gatsby"
 import { getUser, isLoggedIn, logout, handleLogin } from "../services/auth"
-import fb from "../images/fb.png"
-import gmail from "../images/gmail.png"
 
+import logo from "../images/logo.png"
 import "../components/login_mobile.css"
-
-export const big_photo = graphql`
-  query {
-    file(relativePath: { eq: "login_hero_pink.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 900) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
 
 export default class LoginMobile extends React.Component {
   state = {
@@ -40,22 +27,12 @@ export default class LoginMobile extends React.Component {
       navigate(`/`)
     }
     return (
-      <StaticQuery
-        query={big_photo}
-        render={data => (
-          <div className="login-container-mobile">
-            <div class="login-background-mobile">
-              <div class="login-background-overlay-mobile-white">
-                <img class="logo-image-mobile" src={logo} alt="logo" />
-              </div>
-            </div>
-            <div className="login-form-container">
-              <div className="login-div-title">
-                {" "}
-                <p className="login-title">PRIJAVA</p>
-              </div>
-
-              <div className="login-form">
+      <div class="login-active-container">
+        <div class="login-active-background">
+          <div class="login-active-background-overlay">
+            <div class="login-active-elements">
+              <img class="login-active-logo-image" src={logo} alt="logo" />
+              <div class="login-active-form">
                 <form
                   className="my-login-form"
                   method="post"
@@ -66,7 +43,7 @@ export default class LoginMobile extends React.Component {
                 >
                   <div className="top-form-div">
                     <label className="login-form-text">
-                      Korisničko ime:
+                      <p className="login-form-text-name">Korisničko ime:</p>
                       <input
                         type="text"
                         name="username"
@@ -75,7 +52,7 @@ export default class LoginMobile extends React.Component {
                       />
                     </label>
                     <label className="login-form-text">
-                      Lozinka:
+                      <p className="login-form-text-password">Lozinka:</p>
                       <input
                         type="password"
                         name="password"
@@ -91,43 +68,26 @@ export default class LoginMobile extends React.Component {
                       </label>
                     </div>
                   </div>
-                  <div className="div-login-button">
-                    <Link to="/">
-                      <button className="my-login-button-exit">Odustani</button>
-                    </Link>
-                    <input
-                      className="my-login-button"
-                      type="submit"
-                      value="Prijavi se"
-                    />
-                  </div>
                 </form>
               </div>
+              <a href="/" class="login-active-button">
+                Prijavi se
+              </a>
 
-              <div className="login-register">
-                <p className="p-login">Nemaš račun?</p>
-                <button className="login-register-button">
-                  {" "}
-                  Registriraj se!
-                </button>
-              </div>
-              <div className="out-login-buttons">
-                <button className="login-fb-button-mobile">
-                  <img className="fb-image" id="logo" src={fb}></img>
-                  <p className="fb-login-text">
-                    {" "}
-                    Prijavi se putem Facebook računa!
-                  </p>
-                </button>
-                <button className="login-gmail-button-mobile">
-                  <img className="gmail-image" id="logo" src={gmail}></img>
-                  Prijavi se putem Google računa!
-                </button>
+              <div class="login-active-button-options">
+                <a href="/" class="login-active-button-full">
+                  <FaFacebookSquare className="button-icon-active" />
+                  Prijavi se putem Facebooka
+                </a>
+                <a href="/" class="login-active-button-full">
+                  <FaEnvelope className="button-icon-active" />
+                  Prijavi se putem Gmaila
+                </a>
               </div>
             </div>
           </div>
-        )}
-      />
+        </div>
+      </div>
     )
   }
 }
